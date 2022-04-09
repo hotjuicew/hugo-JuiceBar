@@ -1,0 +1,16 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    {{/*  nserts the title of the current page if it exists (from the front matter in Markdown) and appends the site title at the end.  */}}
+    <title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }}">
+    {{/*  Add the canonical url of the page  */}}
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{/*  Social sharing  */}}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ if not (in (string .Site.BaseURL) "localhost") }}
+    {{/*  add Google Analytics  */}}
+    {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
+</head>
