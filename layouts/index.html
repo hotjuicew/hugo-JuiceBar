@@ -1,4 +1,15 @@
 {{/*  the following lines tell Hugo to insert the page content between the <main> tags in the baseof.html file */}}
 {{ define "main" }}
-{{ .Content }}
+<div class="container">
+    <div class="section">
+        {{ with .Params.images }}
+        <figure class="title-image">
+            <img src="{{ index . 0 }}" alt="">
+        </figure>
+        {{ end }}
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
 {{ end }}
