@@ -1,3 +1,5 @@
+<script src={{"js/jquery-3.6.0.min.js" | relURL }}></script>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -6,6 +8,9 @@
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }}">
     {{/*  Add the canonical url of the page  */}}
     <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="stylesheet" type="text/css"  href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" type="text/css"  href="{{ "css/bulma.min.css" | relURL }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     {{/*  Social sharing  */}}
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
@@ -13,4 +18,5 @@
     {{/*  add Google Analytics  */}}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
+    
 </head>

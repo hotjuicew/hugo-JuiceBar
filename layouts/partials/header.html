@@ -1,0 +1,41 @@
+<header>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" title="home" class="navbar-item">
+                    <span class="logo"><h1>{{ .Site.Title }}</h1></span>
+                </a>
+                {{ range .Site.Menus.social }}
+                <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}"><span
+                        class="icon">{{ .Pre }}</span></a>
+                {{ end }}
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    {{ range .Site.Menus.main }}
+                    <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
+                    {{ end }}
+                </div>
+                <div class="navbar-end">
+                    {{ range .Site.Menus.social }}
+                    <a href="{{ .URL }}" class="navbar-item is-hidden-touch" title="{{ .Name }}"><span
+                            class="icon">{{ .Pre }}</span></a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function () {
+            $(".navbar-burger").click(function () {
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            })
+        })
+    </script>
+</header>
