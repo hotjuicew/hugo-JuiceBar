@@ -1,0 +1,28 @@
+{{/*  display the list of posts on our site.  */}}
+{{/*  点击blog之后展示出来的页面  */}}
+{{ define "main" }}
+<div class="container">
+    <div class="section">
+        <div class="content">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+            {{ range .Pages.ByPublishDate.Reverse }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{/*  {{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ range .Pages.ByPublishDate.Reverse }}
+<p>
+    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ partial "metadata.html" . }}
+    <a class="summary" href="{{ .RelPermalink }}">
+        <p>{{ .Summary }}</p>
+    </a>
+</p>
+{{ end }}
+{{ end }}  */}}
