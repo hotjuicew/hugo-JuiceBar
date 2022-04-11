@@ -1,0 +1,43 @@
+/* 标题样式 */
+.logo h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 12px;
+}
+
+
+/* sticky footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+main {
+    flex: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+header, footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+
+.max-800px {
+    max-width: 800px;
+}
+
+.author-image {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+/* 将标题图像与文章的正文分开一点 */
+.title-image {
+    padding-bottom: 2em;
+}
+
+.narrow-background {
+    display: table;
+    padding: 0.1em;
+}

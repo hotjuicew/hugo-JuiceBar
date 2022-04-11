@@ -10,9 +10,10 @@ tags = []
 features = []
 min_version = "0.41.0"
 
+
 [author]
-  name = ""
-  homepage = ""
+  name = "Hotjuice"
+  homepage = "https://hotjui.cc"
 
 # If porting an existing theme
 [original]
