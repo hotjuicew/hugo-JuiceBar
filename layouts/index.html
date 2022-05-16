@@ -1,3 +1,5 @@
+{{/*  index.html是主页模板  */}}
+{{/*  这里的内容是<main></main>，将会嵌入到baseof.html中  */}}
 {{/*  the following lines tell Hugo to insert the page content between the <main> tags in the baseof.html file */}}
 {{ define "main" }}
 <div class="container">
@@ -8,6 +10,7 @@
         </figure>
         {{ end }}
         <div class="content">
+            {{/*  这里将会嵌入用户写的内容  */}}
             {{ .Content }}
         </div>
     </div>
