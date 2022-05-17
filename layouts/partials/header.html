@@ -10,14 +10,18 @@
   url = "/blog"  */}}
 
 
-<nav class="navbar" role="navigation">
+<nav class="navbar" role="navigation" >
     <div class="container">
         {{/*  navbar-brand是包含站点徽标的导航栏的左侧部分，并且始终可见  */}}
         <div class="navbar-brand">
             {{/*  这里添加一个果汁图标  */}}
             <a class="navbar-item">
-                
-                {{/*  <img src="#" width="112" height="28" alt="Bulma">  */}}
+                <div class="field is-grouped">
+                    <svg class="icon" aria-hidden="true" >
+                        <use xlink:href="#icon-guozhi"></use>
+                    </svg>
+                </div>
+
             </a>
             {{/*  网站标题  */}}
             <a href="/" title="home" class="navbar-item">

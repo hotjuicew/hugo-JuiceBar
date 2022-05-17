@@ -1,7 +1,8 @@
+
 /* 标题样式 */
 .logo h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 12px;
+    font-size: 20px;
 }
 
 
@@ -10,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 18px;
   }
 main {
     flex: 1;
@@ -64,5 +66,34 @@ header, footer {
     left: 50%;
     transform: translate(-50%, -50%);
     color: red;
-    font-size: large;
   }
+
+  .navbar {
+    min-height: 40px;
+  }
+  .navbar-brand {
+    padding: 8px 15px;
+  }
+    /* 设置社交图标大小 */
+    .navbar-end {
+        font-size: 20px;
+        padding: 8px 15px;
+      }
+
+      /* 这个是为了给果汁图标单独加一个框框,使得其他图标的外框不会跟着它一起变大 */
+      .field{
+          width: 70px; height: 100px;
+      }
+    /* 设置果汁图标大小 */
+    svg.icon{
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        height: 5rem;
+        width: 5rem;
+    }
+    设置社交图片的padding
+    a.navbar-item.is-hidden-touch{
+        display: block;
+        padding: 20px 20px;
+    }

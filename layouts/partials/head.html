@@ -19,10 +19,14 @@
     {{/*  添加页面的规范 url  */}}
     <link rel="canonical" href="{{ .Permalink }}" />
 
-    <link rel="stylesheet" type="text/css"  href="{{ "css/style.css" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css"  href="{{ "css/style.css" | relURL }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {{/*  添加iconfont中的果汁图标  */}}
+    <script src="http://at.alicdn.com/t/font_3408531_hzh21t1fvt6.js"></script>
+ 
     {{/*  社交分享  */}}
     {{/*  Hugo 有用于为 Open Graph 和 Twitter 卡片创建元数据的内部模板  */}}
     {{ template "_internal/opengraph.html" . }}
