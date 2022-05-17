@@ -1,41 +1,75 @@
-<header>
-    <nav class="navbar" role="navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a href="/" title="home" class="navbar-item">
-                    <span class="logo"><h1>{{ .Site.Title }}</h1></span>
-                </a>
+{{/*  header.html是导航栏  */}}
+{{/*  可以通过向文件中添加条目来添加新的导航链接，config.toml如下所示：
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog"  */}}
+
+
+<nav class="navbar" role="navigation">
+    <div class="container">
+        {{/*  navbar-brand是包含站点徽标的导航栏的左侧部分，并且始终可见  */}}
+        <div class="navbar-brand">
+            {{/*  这里添加一个果汁图标  */}}
+            <a class="navbar-item">
+                
+                {{/*  <img src="#" width="112" height="28" alt="Bulma">  */}}
+            </a>
+            {{/*  网站标题  */}}
+            <a href="/" title="home" class="navbar-item">
+                <span class="logo">
+                    <h1>{{ .Site.Title }}</h1>
+                </span>
+            </a>
+
+            {{/*  社交媒体图标及链接。社交媒体图标还具有is-hidden-desktop类别，这意味着它们仅在触摸设备上可见。  */}}
+            {{/*  range用于遍历后面的数组  */}}
+            {{ range .Site.Menus.social }}
+            <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}"><span
+                    class="icon">{{ .Pre }}</span></a>
+            {{ end }}
+
+            {{/*  navbar-burger这堆东西可能看起来很奇怪，但这个结构是正确渲染汉堡图标所必需的，所以只需复制它就可以了  */}}
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        {{/*  navbar-menu是导航栏的右侧部分，在桌面上可见而在触摸设备上隐藏
+    它再次分为两部分：navbar-start和navbar-end。
+    第一个是徽标后区域的右侧部分，包含来自主菜单配置的链接，这些链接与range循环一起添加。
+    第二个包含社交图标的另一个副本，但这次它们隐藏在触摸设备上。  */}}
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
+                {{ end }}
+            </div>
+            <div class="navbar-end">
                 {{ range .Site.Menus.social }}
-                <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}"><span
+                <a href="{{ .URL }}" class="navbar-item is-hidden-touch" title="{{ .Name }}"><span
                         class="icon">{{ .Pre }}</span></a>
                 {{ end }}
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div class="navbar-menu">
-                <div class="navbar-start">
-                    {{ range .Site.Menus.main }}
-                    <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
-                    {{ end }}
-                </div>
-                <div class="navbar-end">
-                    {{ range .Site.Menus.social }}
-                    <a href="{{ .URL }}" class="navbar-item is-hidden-touch" title="{{ .Name }}"><span
-                            class="icon">{{ .Pre }}</span></a>
-                    {{ end }}
-                </div>
             </div>
         </div>
-    </nav>
-    <script>
-        $(document).ready(function () {
-            $(".navbar-burger").click(function () {
-                $(".navbar-burger").toggleClass("is-active");
-                $(".navbar-menu").toggleClass("is-active");
-            })
+    </div>
+</nav>
+{{/*  这段jq功能是使汉堡图标工作。  */}}
+<script>
+    $(document).ready(function () {
+        $(".navbar-burger").click(function () {
+            {
+                {
+                    /*  toggleClass括号里是布尔值，为true则显示，为false则隐藏  */ }
+            }
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
         })
-    </script>
+    })
+</script>
 </header>
