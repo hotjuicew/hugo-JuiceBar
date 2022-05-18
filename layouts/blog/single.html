@@ -14,11 +14,10 @@
                                     <img src="{{ . }}" class="author-image">
                                 </div>
                                 {{ end }}
-                                <div class="column">
+                                <div class="column" style="text-transform:capitalize;">
                                     <p>{{ .Site.Params.Author }}</p>
-                                    <p><time>{{ .PublishDate.Format "January 2, 2022" }}</time> |
-                                        {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes
-                                        {{ end }}</p>
+                                    <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time> 
+                                       </p>
                                 </div>
                             </div>
                         </div>
