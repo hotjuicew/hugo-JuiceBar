@@ -70,6 +70,7 @@ header, footer {
 
   .navbar {
     min-height: 40px;
+    max-height: 55px;
   }
   .navbar-brand {
     padding: 0px 15px;
@@ -77,9 +78,9 @@ header, footer {
     /* 设置社交图标大小 */
     .navbar-end {
         font-size: 20px;
-        padding: 8px 15px;
+        padding: 0px;
       }
-
+    
       /* 这个是为了给果汁图标单独加一个框框,使得其他图标的外框不会跟着它一起变大 */
       .field{
           width: 70px; height: 80px;
@@ -92,8 +93,7 @@ header, footer {
         height: 5rem;
         width: 5rem;
     }
-    /* 设置社交图片的padding */
-    a.navbar-item.is-hidden-touch{
-        display: block;
-        padding: 20px 20px;
+    .navbar-item{
+      height: 55px;
     }
+    
