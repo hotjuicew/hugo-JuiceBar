@@ -1,21 +1,44 @@
 {{ define "main" }}
-<div class="container">
-    <div class="section">
-        <div class="content">
-            <h1>{{ .Title }}</h1>
-
-            {{ .Content }}
-        </div>
-        <div class="columns is-multiline">
+<div class="columns is-centered">
+    <div class="column max-800px">
+        <div class="archive">
+            {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" }}
+            <h2 class="archive-title">{{ .Key }}</h2>
             {{ range .Pages }}
-            <div class="column is-half">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                <div class="content">
-                    {{ .Summary }}
-                </div>
-            </div>
+            
+                <article class="archive-item">
+                    <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a>
+                    <span class="archive-item-date">
+                        {{ .Date.Format "January 2, 2006" }}
+                    </span>
+           
+            </article>
+            {{ end }}
             {{ end }}
         </div>
     </div>
 </div>
 {{ end }}
+
+
+
+
+
+
+{{/*  {{ define "main" }}
+<div class="container">
+    <div class="section">
+        <div class="content">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+            {{ range .Pages.ByPublishDate.Reverse }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <br>
+            <div class="content">
+                {{ .Summary }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}  */}}

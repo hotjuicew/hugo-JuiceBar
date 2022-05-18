@@ -1,16 +1,11 @@
-
-
-
 @font-face {
   font-family: Cera-Round-Pro-Bold;
   src: url("../font/TypeMatesCeraRoundProBold.otf")
-    
 }
 
 @font-face {
   font-family: Cera-Round-Pro-Regular;
   src: url("../font/TypeMatesCeraRoundProRegular.otf")
-    
 }
 
 /* 标题样式 */
@@ -25,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Cera-Round-Pro-Regular,  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Cera-Round-Pro-Regular, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
   /* font-family: Fontspring-regular, "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
 
@@ -123,10 +118,55 @@ svg.icon {
   height: 60px;
 }
 
-.header{
+.header {
   font-size: 18px;
 }
+
 .footer {
   padding: 18px;
   font-size: 15px;
+}
+
+
+.archive {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.3em;
+  text-align: left;
+  color: #111;
+}
+
+.archive-title {
+  font-size: 32px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.archive-item {
+  margin: 5px 0 15px;
+  padding: 0;
+  
+}
+
+.archive-item-date {
+  color: rgb(142, 139, 139);
+  font-size: 14px;
+  padding: 5px 0;
+  margin-top: 5px;
+  float: right;
+}
+
+.archive-item-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 21px;
+  color: #222;
+  padding: 5px 0;
+  border-bottom: 1px solid rgb(142, 139, 139);
+}
+
+.archive-item-link:hover {
+  border-bottom-color: #222;
 }
