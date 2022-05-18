@@ -35,7 +35,7 @@
             {{ range .Site.Menus.social }}
             <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}"><span
                     class="icon">
-                    <i class='fab fa-{{.Name}}'></i>
+                    {{ partial "svg.html" . }}
                 </span></a>
             {{ end }}
 
@@ -60,7 +60,6 @@
                 {{ range .Site.Menus.social }}
                 <a href="{{ .URL }}" class="navbar-item is-hidden-touch" title="{{ .Name }}"><span
                         class="icon">
-                        {{/*  <i class='fab fa-{{.Name}}'></i>  */}}
                         {{ partial "svg.html" . }}
                     </span></a>
                 {{ end }}
