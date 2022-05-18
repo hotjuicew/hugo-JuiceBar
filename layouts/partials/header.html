@@ -60,7 +60,8 @@
                 {{ range .Site.Menus.social }}
                 <a href="{{ .URL }}" class="navbar-item is-hidden-touch" title="{{ .Name }}"><span
                         class="icon">
-                        <i class='fab fa-{{.Name}}'></i>
+                        {{/*  <i class='fab fa-{{.Name}}'></i>  */}}
+                        {{ partial "svg.html" . }}
                     </span></a>
                 {{ end }}
             </div>
