@@ -70,7 +70,7 @@ header, footer {
 
   .navbar {
     min-height: 40px;
-    max-height: 55px;
+    max-height: 60px;
   }
   .navbar-brand {
     padding: 0px 15px;
@@ -94,6 +94,8 @@ header, footer {
         width: 5rem;
     }
     .navbar-item{
-      height: 55px;
+      height: 60px;
     }
-    
+    .footer{
+      padding: 18px;
+    }
