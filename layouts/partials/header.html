@@ -34,7 +34,9 @@
             {{/*  range用于遍历后面的数组  */}}
             {{ range .Site.Menus.social }}
             <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}"><span
-                    class="icon">{{ .Pre }}</span></a>
+                    class="icon">
+                    <i class='fab fa-{{.Name}}'></i>
+                </span></a>
             {{ end }}
 
             {{/*  navbar-burger这堆东西可能看起来很奇怪，但这个结构是正确渲染汉堡图标所必需的，所以只需复制它就可以了  */}}
@@ -47,7 +49,7 @@
         {{/*  navbar-menu是导航栏的右侧部分，在桌面上可见而在触摸设备上隐藏
     它再次分为两部分：navbar-start和navbar-end。
     第一个是徽标后区域的右侧部分，包含来自主菜单配置的链接，这些链接与range循环一起添加。
-    第二个包含社交图标的另一个副本，但这次它们隐藏在触摸设备上。  */}}
+    第二个包含社交图标的另一个副本，但这次它们隐藏在触摸设备上，显示在电脑浏览器上。  */}}
         <div class="navbar-menu">
             <div class="navbar-start">
                 {{ range .Site.Menus.main }}
@@ -57,7 +59,9 @@
             <div class="navbar-end">
                 {{ range .Site.Menus.social }}
                 <a href="{{ .URL }}" class="navbar-item is-hidden-touch" title="{{ .Name }}"><span
-                        class="icon">{{ .Pre }}</span></a>
+                        class="icon">
+                        <i class='fab fa-{{.Name}}'></i>
+                    </span></a>
                 {{ end }}
             </div>
         </div>
