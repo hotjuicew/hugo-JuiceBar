@@ -16,8 +16,8 @@
                                 {{ end }}
                                 <div class="column" style="text-transform:capitalize;">
                                     <p>{{ .Site.Params.Author }}</p>
-                                    <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time> 
-                                       </p>
+                                    <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -37,4 +37,28 @@
     </article>
 </section>
 
+
+<div class="pp-container">
+    <section class="section pre-and-post">
+        <div class="columns is-centered">
+            <div class="column max-800px">
+                <div class="columns is-mobile">
+                    <div class="column has-text-left">
+                        {{ with .PrevInSection }}
+                        <p>Previous post</p>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        {{ end }}
+                    </div>
+                    <div class="column has-text-right">
+                        {{ with .NextInSection }}
+                        <p>Next post</p>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+</div>
 {{ end }}
