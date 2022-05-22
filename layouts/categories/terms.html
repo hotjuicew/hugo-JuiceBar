@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="container">
+    <div class="section">
+        <div class="content">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+
+<section class="section" >
+    <div class="columns is-mobile is-multiline" >
+        {{ range .Data.Terms.ByCount }}
+        <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen">
+            <div class="card ">
+                    <a href="{{ .Page.Permalink }}">
+                    </a>
+                <div class="card-content has-text-centered">
+                    <div>
+                        <a class="title is-5 is-size-6-mobile" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                        {{ $pageCount := len .Pages }}
+                        <strong>
+                        <sup style="font-size:16px;">{{ $pageCount }}</sup>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}
