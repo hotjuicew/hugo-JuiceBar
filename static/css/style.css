@@ -21,8 +21,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: Cera-Round-Pro-Regular, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-  /* font-family: Fontspring-regular, "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
+  font-size: 18px;
 
 }
 
@@ -139,7 +138,7 @@ svg.icon {
 
 .archive-title {
   font-size: 32px;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -170,3 +169,5 @@ svg.icon {
 .archive-item-link:hover {
   border-bottom-color: #222;
 }
+
+
