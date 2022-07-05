@@ -230,7 +230,7 @@ svg.icon {
 @media (hover: none){
   
   .navbar-item {
-    height: 5vh;
+    height: 2rem;
   }
 }
 
