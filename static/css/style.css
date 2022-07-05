@@ -126,11 +126,7 @@ svg.icon {
   width: 5rem;
 }
 
-@media (min-width: 400px) {
-  .navbar-item {
-    height: 10vh;
-  }
-}
+
 
 .header {
   font-size: 18px;
@@ -223,6 +219,19 @@ svg.icon {
 .navbar.is-light .navbar-brand .navbar-link.is-active, .navbar.is-light .navbar-brand .navbar-link:hover, .navbar.is-light .navbar-brand > a.navbar-item.is-active, .navbar.is-light .navbar-brand > a.navbar-item:hover {
   background-color: var(--main-light);
   color: #363636;
+}
+
+/* 以是否在触摸屏上为界限的媒体查询 */
+@media (hover: hover) {
+  .navbar-item {
+    height: 10vh;
+  }
+}
+@media (hover: none){
+  
+  .navbar-item {
+    height: 5vh;
+  }
 }
 
 
