@@ -9,8 +9,8 @@
 }
 :root {
   --main-black: #363636;
-  --main-orange: #FBBC05;
-  --main-light: #EEB587;
+  --main-orange: #FAB005;
+  --main-light:#f5f5f5;
 }
 
 /* 标题样式 */
@@ -212,6 +212,17 @@ svg.icon {
 .icon{
   color: var(--main-black);
   margin: 0 0.3rem;
+}
+.change-color:hover{
+  color: var(--main-orange);
+}
+.navbar.is-light .navbar-end .navbar-link.is-active, .navbar.is-light .navbar-end .navbar-link:hover, .navbar.is-light .navbar-end > a.navbar-item.is-active, .navbar.is-light .navbar-end > a.navbar-item:hover, .navbar.is-light .navbar-start .navbar-link.is-active, .navbar.is-light .navbar-start .navbar-link:hover, .navbar.is-light .navbar-start > a.navbar-item.is-active, .navbar.is-light .navbar-start > a.navbar-item:hover {
+  background-color: var(--main-light);
+  color: #363636;
+}
+.navbar.is-light .navbar-brand .navbar-link.is-active, .navbar.is-light .navbar-brand .navbar-link:hover, .navbar.is-light .navbar-brand > a.navbar-item.is-active, .navbar.is-light .navbar-brand > a.navbar-item:hover {
+  background-color: var(--main-light);
+  color: #363636;
 }
 
 

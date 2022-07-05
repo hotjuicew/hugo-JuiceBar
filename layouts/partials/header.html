@@ -26,13 +26,13 @@
             {{/*  网站标题  */}}
             <a href="/" title="home" class="navbar-item">
                 <span class="logo">
-                    <h1>{{ .Site.Title }}</h1>
+                    <h1 class="change-color">{{ .Site.Title }}</h1>
                 </span>
             </a>
           
 
             {{/*  navbar-burger这堆东西可能看起来很奇怪，但这个结构是正确渲染汉堡图标所必需的，所以只需复制它就可以了  */}}
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" >
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -40,12 +40,12 @@
         </div>
         {{/*  navbar-menu是导航栏的右侧部分，在桌面上可见而在触摸设备上隐藏
     它再次分为两部分：navbar-start和navbar-end。
-    第一个是徽标后区域的右侧部分，包含来自主菜单配置的链接，这些链接与range循环一起添加。
-    第二个包含社交图标的另一个副本，但这次它们隐藏在触摸设备上，显示在电脑浏览器上。  */}}
+    徽标后区域的右侧部分，包含来自主菜单配置的链接，这些链接与range循环一起添加。
+     */}}
         <div class="navbar-menu">
             <div class="navbar-start">
                 {{ range .Site.Menus.main }}
-                <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
+                <a href="{{ .URL }}" class="navbar-item ">{{ .Name }}</a>
                 {{ end }}
             </div>
             <div class="navbar-end">
