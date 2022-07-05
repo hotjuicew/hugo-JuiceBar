@@ -7,6 +7,11 @@
   font-family: Cera-Round-Pro-Regular;
   src: url("../font/TypeMatesCeraRoundProRegular.otf")
 }
+:root {
+  --main-black: #363636;
+  --main-orange: #FBBC05;
+  --main-light: #EEB587;
+}
 
 /* 标题样式 */
 .logo h1 {
@@ -54,7 +59,7 @@ footer {
   width: 10rem;
   height: 10rem;
   text-align: center;
-  margin: 5rem auto;
+  margin: 1rem auto;
 }
 
 
@@ -200,5 +205,14 @@ svg.icon {
 .avatar-container,.social-icon,.social-icon .icon{
   text-align: center;
 }
+
+.social-icon{
+  margin-bottom: 2rem;
+}
+.icon{
+  color: var(--main-black);
+  margin: 0 0.3rem;
+}
+
 
 
