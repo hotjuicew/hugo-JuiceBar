@@ -232,6 +232,9 @@ svg.icon {
   .navbar-item {
     height: 2rem;
   }
+  .navbar-brand{
+    height: 10vh;
+  }
 }
 
 
