@@ -131,7 +131,7 @@ svg.icon {
 .header {
   font-size: 18px;
 }
-.navbar-burger{
+.navbar-burger,.navbar-item{
   margin: auto;
 }
 
