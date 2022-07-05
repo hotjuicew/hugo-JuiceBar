@@ -54,8 +54,9 @@ footer {
   width: 10rem;
   height: 10rem;
   text-align: center;
-  margin-top: 5rem;
+  margin: 5rem auto;
 }
+
 
 /* 将标题图像与文章的正文分开一点 */
 .title-image {
@@ -182,10 +183,11 @@ svg.icon {
 .archive-item-link:hover {
   border-bottom-color: #222;
 }
+
+
 #home-title{
   font-size: 2.5rem;
   text-align: center;
-  background-color: #bfc;
 }
 #home-box{
   flex-direction: column;
@@ -195,7 +197,7 @@ svg.icon {
   text-align: center;
   font-size: 1.3rem;
 }
-.social-icon>.icon{
+.avatar-container,.social-icon,.social-icon .icon{
   text-align: center;
 }
 

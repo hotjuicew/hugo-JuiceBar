@@ -8,10 +8,10 @@
         <div class="column max-800px">
             <div class="title subtitle heading is-6">
                 <div id="home-box" class="columns is-vcentered">
-                    <div class="column">
-                        <div class="columns is-vcentered is-mobile">
+                    <div class="column avatar-container">
+                        <div class="columns is-vcentered  avatar-container">
                             {{ with .imageUrl }}
-                            <div class="column is-narrow">
+                            <div class="column is-narrow avatar-container">
                                 <img src="{{.}}" class="author-avatar">
 
                             </div>
@@ -24,14 +24,15 @@
                         <h1 id="home-title" class="title is-1 ">{{ .Title }}</h1>
 
                     </div>
-                    <div class="column content discription">
+                    <div class="discription column content ">
                         {{ .Content }}
                     </div>
+
                     <div class="social-icon">
 
                         {{ range .Social }}
                         <a href="{{ .url }}" title="{{ .name }}"><span class="icon">
-                            {{ partial "svg.html" . }}
+                                {{ partial "svg.html" . }}
                             </span></a>
                         {{ end }}
 
