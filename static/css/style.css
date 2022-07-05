@@ -59,7 +59,7 @@ footer {
   width: 10rem;
   height: 10rem;
   text-align: center;
-  margin: 1rem auto;
+  margin: 2rem auto 0 auto;
 }
 
 
@@ -235,7 +235,30 @@ svg.icon {
   .navbar-brand{
     height: 10vh;
   }
+  .section{
+    padding-bottom: 3rem;
+  }
+  .archive-container{
+    
+    padding: 0 3rem;
+  }
+  .archive-title {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .archive-item-link {
+    font-size: 1.4rem;
+   
+    
+  }
+  .archive-item-date{
+    font-size: 1.2rem;
+
+  }
 }
+
 
 
 

@@ -7,7 +7,7 @@
     </div>
 </div>
 <div class="columns is-centered">
-    <div class="column max-800px">
+    <div class="archive-container column max-800px">
         <div class="archive">
             {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" }}
             <h2 class="archive-title">{{ .Key }}</h2>
