@@ -14,14 +14,15 @@
   --font-size-home-title:2.5rem;
   --font-size-article-title:2.5rem;
   --font-size-content:1rem;
-  --font-size-content-larger:1.5rem;
-  --font-size-archive-title:3.2rem;
+  --font-size-content-larger:1.3rem;
+  --font-size-archive-title:1.9rem;
 }
 
 /* 标题样式 */
 .title.is-1 {
   font-family: Cera-Round-Pro-Regular, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size:var(--font-size-article-title);
+  font-weight: bold;
 }
 
 
@@ -102,9 +103,9 @@ footer {
 }
 
 .navbar {
-  min-height: 10vmin;
+  min-height: 6vmin;
   font-size: var(--font-size-content-larger);
-  font-family: Cera-Round-Pro-Bold, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Cera-Round-Pro-Regular, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 
@@ -112,16 +113,11 @@ footer {
   padding: 0px 15px;
 }
 
-/* 设置社交图标大小 */
-.navbar-end {
-  font-size: 20px;
-  padding: 0px;
-}
+
 
 /* 这个是为了给果汁图标单独加一个框框,使得其他图标的外框不会跟着它一起变大 */
 .field {
-  width: 70px;
-  height: 80px;
+  align-items:center
 }
 
 /* 设置果汁图标大小 */
@@ -129,8 +125,11 @@ svg.icon {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  height: 5rem;
-  width: 5rem;
+  height: 2.8rem;
+  width: 2.8rem;
+}
+.logo h1{
+  font-weight: 900;
 }
 
 .navbar-burger,.navbar-item{
@@ -226,11 +225,14 @@ svg.icon {
   background-color: var(--main-light);
   color: #363636;
 }
+.card-container{
+  padding-left: 180px;
+}
 
 /* 以是否在触摸屏上为界限的媒体查询 */
 @media (hover: hover) {
   .navbar-item {
-    height: 10vh;
+    height: 6vh;
   }
 }
 @media (hover: none){
