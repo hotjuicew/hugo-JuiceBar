@@ -29,15 +29,7 @@
                     <h1>{{ .Site.Title }}</h1>
                 </span>
             </a>
-
-            {{/*  社交媒体图标及链接。社交媒体图标还具有is-hidden-desktop类别，这意味着它们仅在触摸设备上可见。  */}}
-            {{/*  range用于遍历后面的数组  */}}
-            {{ range .Site.Menus.social }}
-            <a href="{{ .URL }}" class="navbar-item is-hidden-desktop" title="{{ .Name }}"><span
-                    class="icon">
-                    {{ partial "svg.html" . }}
-                </span></a>
-            {{ end }}
+          
 
             {{/*  navbar-burger这堆东西可能看起来很奇怪，但这个结构是正确渲染汉堡图标所必需的，所以只需复制它就可以了  */}}
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">

@@ -48,6 +48,14 @@ footer {
   width: 48px;
   height: 48px;
 }
+.author-avatar{
+  object-fit: cover;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  margin-top: 5rem;
+}
 
 /* 将标题图像与文章的正文分开一点 */
 .title-image {
@@ -84,8 +92,7 @@ footer {
 }
 
 .navbar {
-  min-height: 40px;
-  max-height: 60px;
+  min-height: 10vmin;
 }
 
 .navbar-brand {
@@ -113,17 +120,23 @@ svg.icon {
   width: 5rem;
 }
 
-.navbar-item {
-  height: 60px;
+@media (min-width: 400px) {
+  .navbar-item {
+    height: 10vh;
+  }
 }
 
 .header {
   font-size: 18px;
 }
+.navbar-burger{
+  margin: auto;
+}
+
 
 .footer {
   padding: 18px;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 
@@ -137,7 +150,7 @@ svg.icon {
 }
 
 .archive-title {
-  font-size: 32px;
+  font-size: 3.2rem;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
@@ -151,7 +164,7 @@ svg.icon {
 
 .archive-item-date {
   color: rgb(142, 139, 139);
-  font-size: 14px;
+  font-size: 1.4rem;
   padding: 5px 0;
   margin-top: 5px;
   float: right;
@@ -160,7 +173,7 @@ svg.icon {
 .archive-item-link {
   display: inline-block;
   text-decoration: none;
-  font-size: 21px;
+  font-size: 1.8rem;
   color: #222;
   padding: 5px 0;
   border-bottom: 1px solid rgb(142, 139, 139);
@@ -168,6 +181,22 @@ svg.icon {
 
 .archive-item-link:hover {
   border-bottom-color: #222;
+}
+#home-title{
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: #bfc;
+}
+#home-box{
+  flex-direction: column;
+  justify-content: center;
+}
+.discription{
+  text-align: center;
+  font-size: 1.3rem;
+}
+.social-icon>.icon{
+  text-align: center;
 }
 
 

@@ -1,12 +1,15 @@
 {{ define "main" }}
-<section class="section">
-    <div class="container max-800px">
-        <h1 class="title is-3">
-            {{ .Title }}
-        </h1>
-        <div class="content">
-            {{ .Content }}
-        </div>
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+    <div class="entry-content">
+        {{ .Content}}
     </div>
-</section>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" site.Params.socialIcons }}
+    </footer>
+</article>
+{{- end -}}
 {{ end }}

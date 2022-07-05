@@ -2,17 +2,51 @@
 {{/*  这里的内容是<main></main>，将会嵌入到baseof.html中  */}}
 {{/*  the following lines tell Hugo to insert the page content between the <main> tags in the baseof.html file */}}
 {{ define "main" }}
-<div class="container">
-    <div class="section">
-        {{ with .Params.images }}
-        <figure class="title-image">
-            <img src="{{ index . 0 }}" alt="">
-        </figure>
-        {{ end }}
-        <div class="content">
-            {{/*  这里将会嵌入用户写的内容  */}}
-            {{ .Content }}
+<article>
+    {{- with site.Params}}
+    <div class="columns is-centered">
+        <div class="column max-800px">
+            <div class="title subtitle heading is-6">
+                <div id="home-box" class="columns is-vcentered">
+                    <div class="column">
+                        <div class="columns is-vcentered is-mobile">
+                            {{ with .imageUrl }}
+                            <div class="column is-narrow">
+                                <img src="{{.}}" class="author-avatar">
+
+                            </div>
+                            {{ end }}
+
+                        </div>
+
+                    </div>
+                    <div class="column">
+                        <h1 id="home-title" class="title is-1 ">{{ .Title }}</h1>
+
+                    </div>
+                    <div class="column content discription">
+                        {{ .Content }}
+                    </div>
+                    <div class="social-icon">
+
+                        {{ range .Social }}
+                        <a href="{{ .url }}" title="{{ .name }}"><span class="icon">
+                            {{ partial "svg.html" . }}
+                            </span></a>
+                        {{ end }}
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
+    {{- end -}}
+
+
+</article>
+
+
+
+
 {{ end }}
