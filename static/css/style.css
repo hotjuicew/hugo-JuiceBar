@@ -11,12 +11,17 @@
   --main-black: #363636;
   --main-orange: #FAB005;
   --main-light:#f5f5f5;
+  --font-size-home-title:2.5rem;
+  --font-size-article-title:2.5rem;
+  --font-size-content:1rem;
+  --font-size-content-larger:1.5rem;
+  --font-size-archive-title:3.2rem;
 }
 
 /* 标题样式 */
-.logo h1 {
-  font-family: Cera-Round-Pro-Bold, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 24px;
+.title.is-1 {
+  font-family: Cera-Round-Pro-Regular, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:var(--font-size-article-title);
 }
 
 
@@ -26,7 +31,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: Cera-Round-Pro-Regular, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 18px;
+  font-size: var(--font-size-content);
 
 }
 
@@ -98,6 +103,9 @@ footer {
 
 .navbar {
   min-height: 10vmin;
+  font-size: var(--font-size-content-larger);
+  font-family: Cera-Round-Pro-Bold, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 .navbar-brand {
@@ -125,11 +133,6 @@ svg.icon {
   width: 5rem;
 }
 
-
-
-.header {
-  font-size: 18px;
-}
 .navbar-burger,.navbar-item{
   margin: auto;
 }
@@ -137,7 +140,7 @@ svg.icon {
 
 .footer {
   padding: 18px;
-  font-size: 1rem;
+  font-size:var(--font-size-content);
 }
 
 
@@ -151,9 +154,9 @@ svg.icon {
 }
 
 .archive-title {
-  font-size: 3.2rem;
+  font-size: var(--font-size-archive-title);
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 
@@ -165,7 +168,7 @@ svg.icon {
 
 .archive-item-date {
   color: rgb(142, 139, 139);
-  font-size: 1.4rem;
+  font-size: var(--font-size-content);
   padding: 5px 0;
   margin-top: 5px;
   float: right;
@@ -174,7 +177,7 @@ svg.icon {
 .archive-item-link {
   display: inline-block;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: var(--font-size-content-larger);
   color: #222;
   padding: 5px 0;
   transition: all 0.1s linear;
@@ -190,7 +193,7 @@ svg.icon {
 
 
 #home-title{
-  font-size: 2.5rem;
+  font-size: var(--font-size-home-title);
   text-align: center;
 }
 #home-box{
@@ -199,7 +202,7 @@ svg.icon {
 }
 .discription{
   text-align: center;
-  font-size: 1.3rem;
+  font-size: var(--font-size-content);
 }
 .avatar-container,.social-icon,.social-icon .icon{
   text-align: center;
