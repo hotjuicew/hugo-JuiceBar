@@ -228,7 +228,8 @@ svg.icon {
   color: #363636;
 }
 .card-container{
-  padding-left: 180px;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 /* 以是否在触摸屏上为界限的媒体查询 */
