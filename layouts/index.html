@@ -24,9 +24,14 @@
                         <h1 id="home-title" class="title is-1 ">{{ .Title }}</h1>
 
                     </div>
-                    <div class="discription column content ">
-                        {{ .Content }}
+                    <div class="discription column content typewriter-effect">
+                        <div class="text" id="typewriter-text"> {{ .Content }}</div>
+                       
                     </div>
+                    <script>
+                        const typeWriter = document.getElementById('typewriter-text');
+                        typeWriter.style.setProperty('--characters', typeWriter.innerHTML.length);
+                    </script>
 
                     <div class="social-icon">
 

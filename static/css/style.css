@@ -250,6 +250,42 @@ svg.icon {
   flex-wrap: wrap;
 }
 
+.typewriter-effect {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.typewriter-effect > .text {
+  max-width: 0;
+  animation: typing 3s steps(var(--characters)) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typewriter-effect:after {
+  content: " |";
+  animation: blink 1s infinite;
+  animation-timing-function: step-end;
+}
+
+@keyframes typing {
+  75%,
+  100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
+
+@keyframes blink {
+  0%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
 /* 以是否在触摸屏上为界限的媒体查询 */
 @media (hover: hover) {
   .navbar-item {
