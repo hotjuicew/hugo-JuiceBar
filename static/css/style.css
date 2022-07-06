@@ -228,7 +228,7 @@ svg.icon {
   color: #363636;
 }
 
-.archive-container{
+.archive-container,.each-category{
   padding-left: 20vw;
   padding-right: 20vw;
 }
@@ -268,10 +268,6 @@ svg.icon {
     padding-bottom: 3rem;
   }
   
-  .archive-container,.each-category{
-    padding-left: 6vw;
-    padding-right: 6vw;
-  }
   
   .archive-title {
     font-size: 2rem;
