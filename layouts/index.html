@@ -47,7 +47,7 @@
 
 </article>
 <div class="summary">
-    {{- $paginator := .Paginate (where .Site.RegularPages "Type" "post")  }}
+    {{- $paginator := .Paginate  (where (where .Site.RegularPages "Type" "post") ".Params.draft" "!=" true)  }}
     {{ range $paginator.Pages }}
         {{ .Render "summary" }}
     {{ end }}

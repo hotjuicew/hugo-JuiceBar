@@ -10,7 +10,7 @@
             <div class="section">
                 <h2 class="archive-title">Category: {{ .Title }}</h2>
             </div>
-            {{ range .Paginator.Pages}}
+            {{ range  .Paginator.Pages}}
            
                 <article class="archive-item">
                     <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a>

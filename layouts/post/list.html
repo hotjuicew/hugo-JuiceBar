@@ -9,7 +9,8 @@
 <div class="columns is-centered">
     <div class="archive-container column max-800px">
         <div class="archive">
-            {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" }}
+            
+            {{ range (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.draft" "!=" true).GroupByDate "2006" }}
             <h2 class="archive-title">{{ .Key }}</h2>
             {{ range .Pages }}
             {{/*  {{ range .Paginators.Pages }} */}}
