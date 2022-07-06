@@ -9,10 +9,10 @@
 </div>
 
 <section class="card-container" >
-    <div class="columns is-mobile is-multiline" >
+    
         {{ range .Data.Terms.ByCount }}
-        <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop ">
-            <div class="card ">
+        <div class="card">
+            
                     <a href="{{ .Page.Permalink }}">
                     </a>
                 <div class="card-content has-text-centered">
@@ -24,10 +24,10 @@
                         </strong>
                     </div>
                 </div>
-            </div>
+           
         </div>
         {{ end }}
-    </div>
+    
 </section>
 
 {{ end }}
