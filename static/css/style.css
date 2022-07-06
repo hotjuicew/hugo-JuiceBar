@@ -214,8 +214,10 @@ svg.icon {
   color: var(--main-black);
   margin: 0 0.3rem;
 }
-.change-color:hover{
+.icon:hover{
   color: var(--main-orange);
+  transform: scale(1.2);
+  transition: all 0.2s linear;
 }
 .navbar.is-light .navbar-end .navbar-link.is-active, .navbar.is-light .navbar-end .navbar-link:hover, .navbar.is-light .navbar-end > a.navbar-item.is-active, .navbar.is-light .navbar-end > a.navbar-item:hover, .navbar.is-light .navbar-start .navbar-link.is-active, .navbar.is-light .navbar-start .navbar-link:hover, .navbar.is-light .navbar-start > a.navbar-item.is-active, .navbar.is-light .navbar-start > a.navbar-item:hover {
   background-color: var(--main-light);
