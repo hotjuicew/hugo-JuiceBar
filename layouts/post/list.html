@@ -6,8 +6,8 @@
         </div>
     </div>
 </div>
-<div class="columns is-centered">
-    <div class="archive-container column max-800px">
+
+    <div class="archive-container column is-centered">
         <div class="archive">
             
             {{ range (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.draft" "!=" true).GroupByDate "2006" }}
@@ -27,6 +27,6 @@
         </div>
 
     </div>
-</div>
+
 
 {{ end }}

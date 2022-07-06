@@ -231,6 +231,10 @@ svg.icon {
   padding-left: 20vw;
   padding-right: 20vw;
 }
+.archive-container{
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
 
 /* 以是否在触摸屏上为界限的媒体查询 */
 @media (hover: hover) {
@@ -249,10 +253,15 @@ svg.icon {
   .section{
     padding-bottom: 3rem;
   }
-  .archive-container{
-    
-    padding: 0 3rem;
+  .card-container{
+    padding-left: 10vw;
+    padding-right: vw;
   }
+  .archive-container,.each-category{
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+  
   .archive-title {
     font-size: 2rem;
     margin-top: 1rem;
@@ -267,6 +276,10 @@ svg.icon {
   .archive-item-date{
     font-size: 1.2rem;
 
+  }
+  .section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
