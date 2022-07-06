@@ -37,6 +37,7 @@
                         {{ end }}
 
                     </div>
+                                   
                 </div>
             </div>
 
@@ -44,9 +45,12 @@
     </div>
     {{- end -}}
 
-
 </article>
-
+<div class="summary">
+    {{ range .Pages }}
+        {{ .Render "summary" }}
+    {{ end }}
+</div> 
 
 
 
