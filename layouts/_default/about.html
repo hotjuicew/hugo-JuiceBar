@@ -1,15 +1,12 @@
+{{/*  单个帖子的模板  */}}
 {{ define "main" }}
-<div class="columns is-centered">
-
-    <div class="column">
-        <div class="container">
-            <div class="section">
-                <div class="content">
-                    <h1>{{ .Title }}</h1>
-                    {{ .Content }}
-                </div>
-            </div>
+<div class="single-container column is-centered">
+    <div class="archive">
+        <h1 class="title is-1">{{ .Title }}</h1>
+        <div class="content artical-content">
+            {{ .Content }}
         </div>
     </div>
+   
 </div>
 {{ end }}
