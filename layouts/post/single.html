@@ -1,6 +1,6 @@
 {{/*  单个帖子的模板  */}}
 {{ define "main" }}
-<div class="archive-container column is-centered">
+<div class="single-container column is-centered">
     <div class="archive">
         <h1 class="title is-1">{{ .Title }}</h1>
         <div class="title subtitle heading is-6">
@@ -12,7 +12,7 @@
                             <img src="{{ . }}" class="author-image">
                         </div>
                         {{ end }}
-                        <div class="column" style="text-transform:capitalize;">
+                        <div class="column" >
                             <p>{{ .Site.Params.Author }}</p>
                             <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time>
                             </p>
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="content">
+        <div class="content artical-content">
             {{ .Content }}
         </div>
     </div>

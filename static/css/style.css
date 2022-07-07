@@ -14,8 +14,8 @@
   --main-light: #f5f5f5;
   --font-size-home-title: 2.5rem;
   --font-size-article-title: 2.5rem;
-  --font-size-content: 1rem;
-  --font-size-content-larger: 1.3rem;
+  --font-size-content: 1.2rem;
+  --font-size-content-larger: 1.5rem;
   --font-size-archive-title: 1.9rem;
 }
 
@@ -245,7 +245,7 @@ svg.icon {
   color: var(--main-black);
 }
 
-.archive-container,
+.single-container,.archive-container,
 .each-category {
   padding-left: 20vw;
   padding-right: 20vw;
@@ -314,10 +314,6 @@ svg.icon {
   transform-origin: bottom left;
 }
 
-.single-container {
-  padding-left: 20vw;
-  padding-right: 20vw;
-}
 
 @keyframes typing {
 
@@ -344,7 +340,9 @@ svg.icon {
   display: flex;
   justify-content: space-between;
 }
-
+.artical-content{
+  margin: 2rem 0;
+}
 
 
 /* 以是否在触摸屏上为界限的媒体查询 */
