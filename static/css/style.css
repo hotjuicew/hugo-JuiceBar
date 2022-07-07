@@ -405,4 +405,7 @@ svg.icon {
     padding-left: 5vw;
     padding-right: 5vw;
   }
+  .title, .archive-title{
+    margin-top: 1vh;
+  }
 }
