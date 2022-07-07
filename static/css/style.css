@@ -180,13 +180,7 @@ svg.icon {
   color: #222;
   padding: 5px 0;
   transition: all 0.1s linear;
-  border-bottom: 2px solid var(--main-orange);
 
-}
-
-.archive-item-link:hover {
-  transform: scale(1.1);
-  transition: all 0.3s linear;
 }
 
 
@@ -221,11 +215,11 @@ svg.icon {
 }
 .navbar.is-light .navbar-end .navbar-link.is-active, .navbar.is-light .navbar-end .navbar-link:hover, .navbar.is-light .navbar-end > a.navbar-item.is-active, .navbar.is-light .navbar-end > a.navbar-item:hover, .navbar.is-light .navbar-start .navbar-link.is-active, .navbar.is-light .navbar-start .navbar-link:hover, .navbar.is-light .navbar-start > a.navbar-item.is-active, .navbar.is-light .navbar-start > a.navbar-item:hover {
   background-color: var(--main-light);
-  color: #363636;
+  color: var(--main-black);
 }
 .navbar.is-light .navbar-brand .navbar-link.is-active, .navbar.is-light .navbar-brand .navbar-link:hover, .navbar.is-light .navbar-brand > a.navbar-item.is-active, .navbar.is-light .navbar-brand > a.navbar-item:hover {
   background-color: var(--main-light);
-  color: #363636;
+  color: var(--main-black);
 }
 
 .archive-container,.each-category{
@@ -267,6 +261,30 @@ svg.icon {
   content: " |";
   animation: blink 1s infinite;
   animation-timing-function: step-end;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--main-black);
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-orange);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 @keyframes typing {
