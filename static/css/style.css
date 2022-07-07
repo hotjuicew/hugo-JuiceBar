@@ -253,11 +253,11 @@ svg.icon {
 .typewriter-effect {
   display: flex;
   justify-content: center;
-  font-family: monospace;
 }
 
 .typewriter-effect > .text {
   max-width: 0;
+  text-transform:capitalize;
   animation: typing 3s steps(var(--characters)) infinite;
   white-space: nowrap;
   overflow: hidden;
