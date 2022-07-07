@@ -14,8 +14,8 @@
   --main-light: #f5f5f5;
   --font-size-home-title: 2.5rem;
   --font-size-article-title: 2.5rem;
-  --font-size-content: 1.2rem;
-  --font-size-content-larger: 1.5rem;
+  --font-size-content: 1.1rem;
+  --font-size-content-larger: 1.3rem;
   --font-size-archive-title: 1.9rem;
 }
 
@@ -400,5 +400,9 @@ svg.icon {
   .card {
     margin: 1rem;
 
+  }
+  .single-container, .archive-container, .each-category {
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 }
