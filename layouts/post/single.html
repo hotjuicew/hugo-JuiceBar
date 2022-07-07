@@ -1,64 +1,51 @@
 {{/*  单个帖子的模板  */}}
 {{ define "main" }}
-<section class="section">
-    <article>
-        <div class="columns is-centered">
-            <div class="column max-800px">
-                <h1 class="title is-1">{{ .Title }}</h1>
-                <div class="title subtitle heading is-6">
-                    <div class="columns is-vcentered">
-                        <div class="column">
-                            <div class="columns is-vcentered is-mobile">
-                                {{ with .Site.Params.authorImage }}
-                                <div class="column is-narrow">
-                                    <img src="{{ . }}" class="author-image">
-                                </div>
-                                {{ end }}
-                                <div class="column" style="text-transform:capitalize;">
-                                    <p>{{ .Site.Params.Author }}</p>
-                                    <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time>
-                                    </p>
-                                </div>
-                            </div>
+<div class="archive-container column is-centered">
+    <div class="archive">
+        <h1 class="title is-1">{{ .Title }}</h1>
+        <div class="title subtitle heading is-6">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <div class="columns is-vcentered is-mobile">
+                        {{ with .Site.Params.authorImage }}
+                        <div class="column is-narrow">
+                            <img src="{{ . }}" class="author-image">
                         </div>
-                        <div class="column">
-                            {{ range $idx, $category := .Params.categories }}
-                            {{- if ne $idx 0 }}, {{ end }}<a
-                                href="{{ "categories/" | relURL }}{{ $category | urlize }}">{{ $category }}</a>
-                            {{- end }}
+                        {{ end }}
+                        <div class="column" style="text-transform:capitalize;">
+                            <p>{{ .Site.Params.Author }}</p>
+                            <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="content">
-                    {{ .Content }}
+                <div class="column">
+                    {{ range $idx, $category := .Params.categories }}
+                    {{- if ne $idx 0 }}, {{ end }}<a
+                        href="{{ "categories/" | relURL }}{{ $category | urlize }}">{{ $category }}</a>
+                    {{- end }}
                 </div>
             </div>
         </div>
-    </article>
-</section>
-
-
-<div class="pp-container">
-    <section class="section pre-and-post">
-        <div class="columns is-centered">
-            <div class="column max-800px">
-                <div class="columns is-mobile">
-                    <div class="column has-text-left">
-                        {{ with .PrevInSection }}
-                        <p>Previous post</p>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                        {{ end }}
-                    </div>
-                    <div class="column has-text-right">
-                        {{ with .NextInSection }}
-                        <p>Next post</p>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
+        <div class="content">
+            {{ .Content }}
         </div>
-    
-    </section>
+    </div>
+    <div class="pp-container">
+        <section class="pre-and-post">
+                        <div class="has-text-left">
+                            {{ with .PrevInSection }}
+                            <p>Previous post</p>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            {{ end }}
+                        </div>
+                        <div class="has-text-right">
+                            {{ with .NextInSection }}
+                            <p>Next post</p>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            {{ end }}
+                        </div>
+        </section>
+    </div>
 </div>
 {{ end }}
