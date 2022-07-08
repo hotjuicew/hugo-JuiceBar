@@ -220,7 +220,7 @@ h1 {
   margin: 0 0.3rem;
 }
 
-.icon:hover {
+.icon:hover,.fa-search:hover {
   color: var(--main-orange);
   transform: scale(1.2);
   transition: all 0.2s linear;
@@ -300,7 +300,27 @@ p{
   margin-right: 3rem;
   text-align: center;
 }
-
+input{
+  height: 60%;
+  width: 20vw;
+  align-self: center;
+  margin-right: 0.5rem;
+  border-radius: 24px;
+}
+.search{
+  display: flex;
+  height: 100%;
+  align-items:center;
+}
+button{
+border: none;
+background-color: var(--main-light);
+}
+input:focus{
+  outline: none;
+  border: 2px solid;
+  border-color: var(--main-orange);
+}
 
 .typewriter-effect {
   display: flex;
@@ -446,5 +466,8 @@ p{
   }
   .small-categories-container{
     margin-right: 5px;
+  }
+  .search{
+    display: none;
   }
 }
