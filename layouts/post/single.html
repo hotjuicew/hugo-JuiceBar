@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="small-categories-container">
                     {{ range $idx, $category := .Params.categories }}
                     {{- if ne $idx 0 }}, {{ end }}<a
                         href="{{ "categories/" | relURL }}{{ $category | urlize }}">{{ $category }}</a>

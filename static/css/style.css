@@ -12,6 +12,7 @@
   --main-black: #363636;
   --main-orange: #FAB005;
   --main-light: #f5f5f5;
+  --main-grey:rgb(142, 139, 139);
   --font-size-home-title: 2.5rem;
   --font-size-article-title: 2.5rem;
   --font-size-content: 1.1rem;
@@ -170,7 +171,7 @@ h1 {
 }
 
 .archive-item-date {
-  color: rgb(142, 139, 139);
+  color: var(--main-grey);
   font-size: var(--font-size-content);
   padding: 5px 0;
   margin-top: 5px;
@@ -295,6 +296,11 @@ h1 {
 p{
   font-weight: normal;
 }
+.small-categories-container{
+  margin-right: 3rem;
+  text-align: center;
+}
+
 
 .typewriter-effect {
   display: flex;
@@ -365,10 +371,12 @@ p{
   display: flex;
   justify-content: space-between;
 }
-.artical-content{
+.artical-content,.about-content{
   margin: 2rem 0;
 }
-
+.about-content{
+  font-size: var(--font-size-content-larger);
+}
 
 /* 以是否在触摸屏上为界限的媒体查询 */
 @media (hover: hover) {
@@ -435,5 +443,8 @@ p{
   }
   .post-title{
     margin-bottom: 0.5rem;
+  }
+  .small-categories-container{
+    margin-right: 5px;
   }
 }
