@@ -131,7 +131,7 @@ svg.icon {
   width: 2.8rem;
 }
 
-.logo h1 {
+h1 {
   font-weight: 900;
 }
 
@@ -270,6 +270,29 @@ svg.icon {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.excerpt{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.post-title{
+  margin-bottom: 1rem;
+}
+.post-link{
+  color: var(--main-black);
+  font-size:var(--font-size-content-larger);
+
+}
+.post-time-container{
+  margin-top: 0.5rem;
+}
+#post-container{
+  padding: 1rem;
+  background-color: var(--main-light);
+  border-radius: 24px;
+}
+
 
 .typewriter-effect {
   display: flex;
@@ -407,5 +430,8 @@ svg.icon {
   }
   .title, .archive-title{
     margin-top: 1vh;
+  }
+  .post-title{
+    margin-bottom: 0.5rem;
   }
 }
