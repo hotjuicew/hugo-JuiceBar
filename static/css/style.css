@@ -292,7 +292,9 @@ h1 {
   background-color: var(--main-light);
   border-radius: 24px;
 }
-
+p{
+  font-weight: normal;
+}
 
 .typewriter-effect {
   display: flex;
