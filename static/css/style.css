@@ -106,7 +106,7 @@ footer {
 }
 
 .navbar {
-  min-height: 6vmin;
+  height: 6vmin;
   font-size: var(--font-size-content-larger);
   font-family: Cera-Round-Pro-Regular, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -229,7 +229,7 @@ h1 {
 }
 
 .navbar.is-light .navbar-end .navbar-link.is-active,
-.navbar.is-light .navbar-end .navbar-link:hover,
+.navbar.is-light .navbar-end .navbar-link:hover,navbar
 .navbar.is-light .navbar-end>a.navbar-item.is-active,
 .navbar.is-light .navbar-end>a.navbar-item:hover,
 .navbar.is-light .navbar-start .navbar-link.is-active,
@@ -310,9 +310,27 @@ p {
   margin-right: 3rem;
   text-align: center;
 }
-
-input {
+.search{
+  align-items: center;
+}
+#fastSearch{
   height: 60%;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+#searchInput{
+  height: 100%;
+  flex-shrink: 0
+}
+
+#searchResults{
+  position: relative;
+  display: inline-block;
+  /* position: absolute; */
+}
+input {
+  height: 100%;
   width: 20vw;
   align-self: center;
   margin-right: 0.5rem;
@@ -336,6 +354,7 @@ button {
   border: none;
   background-color: var(--main-light);
 }
+
 
 
 .typewriter-effect {
@@ -380,7 +399,12 @@ button {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
+li a .title{
+  text-decoration: none;
+  display: block;
+  font-size: var(--font-size-content);
+  margin: 0.5rem auto;
+}
 
 @keyframes typing {
 

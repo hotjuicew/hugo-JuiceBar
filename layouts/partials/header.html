@@ -59,18 +59,16 @@
 
         </div>
         <div class="search">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <div id="fastSearch">
+                <input id="searchInput" tabindex="0" placeholder="Search..">
+                <ul id="searchResults">
+                </ul>
+            </div>
+            <a id="search-btn" style="display: inline-block;" href="javascript:void(0); ">
+                <span class="icon-search"><i class="fa fa-search"></i></span>
+            </a>
         </div>
-        <a id="search-btn" style="display: inline-block;" href="javascript:void(0);">
-            <span class="icon-search">捜</span>
-        </a>
-
-        <div id="fastSearch">
-            <input id="searchInput" tabindex="0">
-            <ul id="searchResults">
-            </ul>
-        </div>
+        
         <script src="/js/fuse.min.js"></script> <!-- download and copy over fuse.min.js file from fusejs.io -->
         <script src="/js/fastsearch.js"></script>
 
