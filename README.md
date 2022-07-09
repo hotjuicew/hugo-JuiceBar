@@ -16,7 +16,7 @@ $ git submodule update
 Now you can get updates to hugo-JuiceBar in the future by updating the submodule:
 
 ```
-$ git submodule update --remote themes/hugo-JuiceBar
+$ git submodule update --remote themes/JuiceBar
 ```
 ## Configuration
 
