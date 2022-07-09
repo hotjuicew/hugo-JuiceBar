@@ -222,7 +222,7 @@ h1 {
 }
 
 .icon:hover,
-.fa-search:hover {
+.search-svg:hover {
   color: var(--main-orange);
   transform: scale(1.2);
   transition: all 0.2s linear;
