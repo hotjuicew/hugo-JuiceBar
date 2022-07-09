@@ -458,7 +458,7 @@ a {
     height: 2rem;
   }
 
-  .navbar-brand {
+  .navbar,.navbar-brand {
     height: 10vh;
   }
 
