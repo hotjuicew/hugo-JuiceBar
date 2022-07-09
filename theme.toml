@@ -15,9 +15,5 @@ min_version = "0.41.0"
   name = "Hotjuice"
   homepage = "https://hotjui.cc"
 
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+
 
