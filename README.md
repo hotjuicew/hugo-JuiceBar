@@ -8,7 +8,7 @@ You can install the theme either as a clone or submodule.
 I recommend the latter. From the root of your Hugo site, type the following:
 
 ```
-$ git submodule add https://github.com/calintat/hugo-JuiceBar.git themes/minimal
+$ git submodule add https://github.com/hotjuicew/hugo-JuiceBar.git themes/hugo-JuiceBar
 $ git submodule init
 $ git submodule update
 ```
