@@ -4,14 +4,13 @@
 {{ define "main" }}
 <article>
     {{- with site.Params}}
-    <div class="columns is-centered">
-        <div class="column max-800px">
+    <div class="is-centered">
             <div class="title subtitle heading is-6">
-                <div id="home-box" class="columns is-vcentered">
-                    <div class="column avatar-container">
-                        <div class="columns is-vcentered  avatar-container">
+                <div id="home-box" >
+                    <div class="">
+                        <div class="avatar-container">
                             {{ with .imageUrl }}
-                            <div class="column is-narrow avatar-container">
+                            <div class="avatar-container">
                                 <img src="{{.}}" class="author-avatar">
 
                             </div>
@@ -44,7 +43,6 @@
                 </div>
             </div>
 
-        </div>
     </div>
     {{- end -}}
 
