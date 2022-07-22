@@ -1,0 +1,13 @@
+<div class="post-toc">
+    {{ if and (gt .WordCount 80 ) (.Params.toc | default true ) }} <!-- 关键是这一行 -->
+    <aside>
+        <header>
+        <h4>CONTENTS</h4> 
+        </header>
+        {{- $toc := .TableOfContents -}}
+        {{- $toc := replaceRE `<ul>\n<li>\n<ul>` `<ul>` $toc -}}
+        {{- safeHTML $toc -}}
+    </aside>
+    <a href="#" id="toc-toggle"></a>
+    {{ end }} <!-- 不要忘记写end -->
+    </div>

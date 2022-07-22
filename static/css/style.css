@@ -438,6 +438,8 @@ li a .title {
 a {
   color: var(--main-black);
 }
+.toc-container{
+  position: fixed; right:5px;max-width:300px; overflow:auto; top: 100px; width: 10vw; bottom:50px;margin-right:1vw}
 
 /* 以是否在触摸屏上为界限的媒体查询 */
 @media (hover: hover) {
@@ -447,6 +449,9 @@ a {
 }
 
 @media (hover: none) {
+  .post-toc {
+    display: none;
+}
   .small-categories-container {
     margin-right: 5vw;
   }

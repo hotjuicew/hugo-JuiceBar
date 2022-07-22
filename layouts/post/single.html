@@ -28,6 +28,9 @@
             </div>
         </div>
         <div class="content artical-content">
+            <div class="toc-container">
+                {{ partial "toc.html" . }}
+                </div>
             {{ .Content }}
         </div>
     </div>
