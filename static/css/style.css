@@ -12,7 +12,7 @@
 
 /* 标题样式 */
 .title.is-1 {
-  font-family:Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif;
+  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif;
   font-size: var(--font-size-article-title);
   font-weight: bold;
 }
@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family:Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif;
+  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif;
   font-size: var(--font-size-content);
 
 }
@@ -218,8 +218,8 @@ h1 {
 }
 
 .navbar.is-light .navbar-end .navbar-link.is-active,
-.navbar.is-light .navbar-end .navbar-link:hover,navbar
-.navbar.is-light .navbar-end>a.navbar-item.is-active,
+.navbar.is-light .navbar-end .navbar-link:hover,
+navbar .navbar.is-light .navbar-end>a.navbar-item.is-active,
 .navbar.is-light .navbar-end>a.navbar-item:hover,
 .navbar.is-light .navbar-start .navbar-link.is-active,
 .navbar.is-light .navbar-start .navbar-link:hover,
@@ -297,27 +297,31 @@ p {
 
 .small-categories-container {
   margin-right: 3rem;
-  text-align: center;
+  text-align: right;
 }
-.search{
+
+.search {
   align-items: center;
 }
-#fastSearch{
+
+#fastSearch {
   height: 60%;
   display: flex;
   flex-direction: column;
   visibility: hidden;
 }
-#searchInput{
+
+#searchInput {
   height: 100%;
   flex-shrink: 0
 }
 
-#searchResults{
+#searchResults {
   position: relative;
   display: inline-block;
   /* position: absolute; */
 }
+
 input {
   height: 100%;
   width: 20vw;
@@ -388,7 +392,8 @@ button {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-li a .title{
+
+li a .title {
   text-decoration: none;
   display: block;
   font-size: var(--font-size-content);
@@ -442,12 +447,16 @@ a {
 }
 
 @media (hover: none) {
+  .small-categories-container {
+    margin-right: 5vw;
+  }
 
   .navbar-item {
     height: 2rem;
   }
 
-  .navbar,.navbar-brand {
+  .navbar,
+  .navbar-brand {
     height: 10vh;
   }
 
@@ -507,9 +516,6 @@ a {
     margin-bottom: 0.5rem;
   }
 
-  .small-categories-container {
-    margin-right: 5px;
-  }
 
   .search {
     display: none;
