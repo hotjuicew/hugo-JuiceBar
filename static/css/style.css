@@ -5,7 +5,7 @@
   --main-grey: rgb(142, 139, 139);
   --font-size-home-title: 2.5rem;
   --font-size-article-title: 2.5rem;
-  --font-size-article-title-mobile:2rem;
+  --font-size-article-title-mobile: 2rem;
   --font-size-content: 1.1rem;
   --font-size-content-larger: 1.3rem;
   --font-size-archive-title: 1.9rem;
@@ -438,8 +438,17 @@ li a .title {
 a {
   color: var(--main-black);
 }
-.toc-container{
-  position: fixed; right:5px;max-width:300px; overflow:auto; top: 100px; width: 10vw; bottom:50px;margin-right:1vw}
+
+.toc-container {
+  position: fixed;
+  right: 5px;
+  max-width: 300px;
+  overflow: auto;
+  top: 100px;
+  width: 10vw;
+  bottom: 50px;
+  margin-right: 1vw
+}
 
 /* 以是否在触摸屏上为界限的媒体查询 */
 @media (hover: hover) {
@@ -451,10 +460,12 @@ a {
 @media (hover: none) {
   .post-toc {
     display: none;
-}
+  }
+
   .small-categories-container {
     margin-right: 5vw;
   }
+
   .title.is-1 {
     font-size: var(--font-size-article-title-mobile);
   }
