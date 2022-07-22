@@ -393,6 +393,9 @@ button {
   transform-origin: bottom left;
 }
 
+#TableOfContents a:hover,#TableOfContents a:active {
+color: var(--main-orange);
+}
 li a .title {
   text-decoration: none;
   display: block;
@@ -438,16 +441,22 @@ li a .title {
 a {
   color: var(--main-black);
 }
+ul li{
 
+}
+
+
+/* CSS right属性
+
+将定位的 <div> 元素的右边缘设置为其最近定位的祖先的右边缘的左侧5px：
+ */
 .toc-container {
   position: fixed;
-  right: 5px;
-  max-width: 300px;
+  right: 5vw;
   overflow: auto;
   top: 100px;
-  width: 10vw;
+  width: 15vw;
   bottom: 50px;
-  margin-right: 1vw
 }
 
 /* 以是否在触摸屏上为界限的媒体查询 */
