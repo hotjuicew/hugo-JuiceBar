@@ -1,6 +1,6 @@
 # hugo-JuiceBar
 Personal blog theme powered by [Hugo](https://gohugo.io).
-![image-20221124161627293](D:\workspace\blog\themes\JuiceBar\readme-pic\image-20221124161627293.png)
+![image-20221124161627293](./readme-pic/image-20221124161627293.png)
 
 ![image-20221124161829672](D:\workspace\blog\themes\JuiceBar\readme-pic\image-20221124161829672.png)
 
