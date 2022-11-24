@@ -2,13 +2,13 @@
 Personal blog theme powered by [Hugo](https://gohugo.io).
 ![image-20221124161627293](./readme-pic/image-20221124161627293.png)
 
-![image-20221124161829672](D:\workspace\blog\themes\JuiceBar\readme-pic\image-20221124161829672.png)
+![image-20221124161829672](./readme-pic/image-20221124161829672.png)
 
-![image-20221124161904663](D:\workspace\blog\themes\JuiceBar\readme-pic\image-20221124161904663.png)
+![image-20221124161904663](./readme-pic/image-20221124161904663.png)
 
-![image-20221124161954640](D:\workspace\blog\themes\JuiceBar\readme-pic\image-20221124161954640.png)
+![image-20221124161954640](./readme-pic/image-20221124161954640.png)
 
-![image-20221124162031982](D:\workspace\blog\themes\JuiceBar\readme-pic\image-20221124162031982.png)
+![image-20221124162031982](./readme-pic/image-20221124162031982.png)
 
 ## Installation
 
