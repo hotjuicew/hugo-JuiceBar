@@ -1,33 +1,17 @@
-{{/*  所有的都是<head></head>标签里的内容  */}}
 <script src={{"js/jquery-3.6.0.min.js" | relURL }}></script>
 
 <head>
     <meta charset="utf-8">
-    {{/*  为了支持手机上的响应式页面，标记视口元  */}}
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    {{/*  定义页面标题。每个页面都应该有一个唯一的标题。以下代码插入当前页面的标题（如果存在）（来自 Markdown 中的前端），并在末尾附加站点标题。它还检查当前页面是否是主页，在这种情况下只使用站点标题。  */}}
-    {{/*  with的作用是检查所需变量的存在并将其设置为块内的当前上下文  */}}
-    {{/*  只包含一个点的花括号意味着“在此处插入当前上下文的内容”  */}}
-    {{/*  最后是 空格、竖线和空格以及end。这样我们所有的页面标题都将是“帖子标题 | 站点名称”，或只是“站点名称”  */}}
     <title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
-    {{/*  元描述是显示在搜索引擎结果页面中的链接下的文本。它的长度通常应少于 150 个字符。如果在页面前端内容中定义，下面的代码将使用描述参数。
-    如果尚未设置页面描述，则将使用页面摘要。因为我们还没有在配置文件中设置默认描述，所以一开始它是空的。
-    config.toml如果缺少单个页面的描述，请打开文件并添加要使用的站点范围描述：
-    [params]
-        description = "My site description"  */}}
     <meta name="description"
         content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }}">
-    {{/*  添加页面的规范 url  */}}
     <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | relURL }}">
-    {{/*  社交分享  */}}
-    {{/*  Hugo 有用于为 Open Graph 和 Twitter 卡片创建元数据的内部模板  */}}
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     {{ if not (in (string .Site.BaseURL) "localhost") }}
-    {{/*  谷歌分析  */}}
-    {{/*  谷歌分析也有内部模板  */}}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
 

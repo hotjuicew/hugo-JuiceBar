@@ -13,7 +13,7 @@
 
 /* 标题样式 */
 .title.is-1 {
-  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif;
+  font-family: Inter,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   font-size: var(--font-size-article-title);
 }
 
@@ -181,7 +181,6 @@ h1 {
 
 
 #home-title {
-  font-size: var(--font-size-home-title);
   text-align: center;
 }
 
@@ -458,19 +457,17 @@ ul li{
   width: 15vw;
   bottom: 50px;
 }
-
-/* 以是否在触摸屏上为界限的媒体查询 */
-@media (hover: hover) {
-  .navbar-item {
-    height: 6vh;
-  }
+.navbar-item {
+  height: 6vh;
 }
 
-@media (hover: none) {
+@media (max-width: 768px) {
   .post-toc {
     display: none;
   }
-
+  .post-link{
+    font-size: var(--font-size-content);
+  }
   .small-categories-container {
     margin-right: 5vw;
   }
