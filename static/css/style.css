@@ -5,8 +5,8 @@
   --main-grey: rgb(142, 139, 139);
   --font-size-home-title: 2.5rem;
   --font-size-article-title: 2.5rem;
-  --font-size-article-title-mobile: 2rem;
-  --font-size-content: 1.1rem;
+  --font-size-article-title-mobile: 1.8rem;
+  --font-size-content: 1rem;
   --font-size-content-larger: 1.3rem;
   --font-size-archive-title: 1.9rem;
 }
@@ -457,13 +457,16 @@ ul li{
   width: 15vw;
   bottom: 50px;
 }
-.navbar-item {
-  height: 6vh;
-}
+/*.navbar-item {*/
+/*  height: 6vh;*/
+/*}*/
 
 @media (max-width: 768px) {
   .post-toc {
     display: none;
+  }
+  .content h2{
+    font-size: 1.5rem;
   }
   .post-link{
     font-size: var(--font-size-content);
@@ -476,9 +479,9 @@ ul li{
     font-size: var(--font-size-article-title-mobile);
   }
 
-  .navbar-item {
-    height: 2rem;
-  }
+  /*.navbar-item {*/
+  /*  height: 2rem;*/
+  /*}*/
 
   .navbar,
   .navbar-brand {
