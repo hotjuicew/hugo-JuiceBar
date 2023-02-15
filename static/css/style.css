@@ -135,6 +135,12 @@ h1 {
   padding: 18px;
   font-size: var(--font-size-content);
 }
+.pagination{
+  margin: 0 10vw 1rem 10vw;
+}
+.pag-link{
+  font-weight: bold;
+}
 
 
 .archive {
@@ -440,9 +446,7 @@ li a .title {
 a {
   color: var(--main-black);
 }
-ul li{
 
-}
 
 
 /* CSS right属性

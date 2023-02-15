@@ -1,0 +1,15 @@
+<hr>
+<section class="pagination" >
+    {{ if .Paginator.HasPrev }}
+
+    <button class="button ">
+        <a href="{{ .Paginator.Prev.URL }}" class="pag-link"> Prev </a>
+    </button>
+    {{ end }}
+    <label class="pag-link">Page {{ .Paginator.PageNumber}} of {{.Paginator.TotalPages}}</label>
+    {{ if .Paginator.HasNext }}
+    <button class="button"  >
+        <a href="{{ .Paginator.Next.URL }}" class="pag-link"> Next </a>
+    </button>
+    {{ end }}
+</section>

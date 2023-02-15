@@ -49,5 +49,7 @@
     {{ range $paginator.Pages }}
         {{ .Render "summary" }}
     {{ end }}
+    {{ partial "pagination.html" . }}
+
 </div>
 {{ end }}
