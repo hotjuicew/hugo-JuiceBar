@@ -323,8 +323,29 @@ p {
 
 #searchResults {
   position: relative;
+  margin-top: 10px;
   display: inline-block;
-  /* position: absolute; */
+  border-radius: 5px;
+}
+#searchResults li{
+  background-color: var(--main-light);
+
+  padding-left: 1rem;
+  border-bottom:1px solid var(--main-black);
+  border-left: 1px solid var(--main-black);
+  border-right: 1px solid var(--main-black);
+}
+#searchResults li:hover{
+  background-color: var(--main-grey);
+}
+#searchResults li:first-child{
+  border-top: 1px solid var(--main-black);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#searchResults li:last-child{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 input {
@@ -339,7 +360,6 @@ input {
 input:focus {
   outline: none;
   border: 2px solid;
-  border-color: var(--main-orange);
 }
 
 .search {
@@ -401,11 +421,13 @@ button {
 #TableOfContents a:hover,#TableOfContents a:active {
 color: var(--main-orange);
 }
+/*搜索栏*/
 li a .title {
   text-decoration: none;
-  display: block;
+  /*display: block;*/
   font-size: var(--font-size-content);
-  margin: 0.5rem auto;
+  padding-left: 0.5rem;
+  font-weight: normal;
 }
 
 @keyframes typing {
