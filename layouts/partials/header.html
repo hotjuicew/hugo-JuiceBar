@@ -12,9 +12,7 @@
 
 <nav class="navbar is-light" role="navigation">
     <div class="container">
-        {{/*  navbar-brand是包含站点徽标的导航栏的左侧部分，并且始终可见  */}}
         <div class="navbar-brand">
-            {{/*  网站标题  */}}
             <a href="/" title="home" class="navbar-item">
                 <span class="logo">
                     <h1>{{ .Site.Title }}</h1>
@@ -28,10 +26,7 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        {{/*  navbar-menu是导航栏的右侧部分，在桌面上可见而在触摸设备上隐藏
-    它再次分为两部分：navbar-start和navbar-end。
-    徽标后区域的右侧部分，包含来自主菜单配置的链接，这些链接与range循环一起添加。
-     */}}
+
         <div class="navbar-menu">
             <div class="navbar-start">
                 {{ range .Site.Menus.main }}

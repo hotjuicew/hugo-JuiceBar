@@ -97,10 +97,10 @@ footer {
 
 .navbar {
   height: 6vmin;
-  font-size: var(--font-size-content-larger);
-
 }
-
+.logo h1{
+  font-size: 1.5rem;
+}
 .navbar-brand {
   padding: 0px 15px;
 }
@@ -116,6 +116,7 @@ h1 {
   font-size: var(--font-size-content);
 }
 .pagination{
+  justify-content: space-around;
   margin: 0 10vw 1rem 10vw;
 }
 .pag-link{
@@ -447,9 +448,7 @@ li a .title {
 .about-content {
   font-size:1rem
 }
-.column{
-  font-size: 13px;
-}
+
 .author-info{
   display: flex;
 }
@@ -460,7 +459,10 @@ li a .title {
 a {
   color: var(--main-black);
 }
-
+.navbar-menu{
+  background-color: var(--main-light);
+  font-size: 1.1rem;
+}
 
 
 /* CSS right属性
@@ -486,8 +488,8 @@ a {
   .post-toc {
     display: none;
   }
-  .h1-title{
-    font-size: 1.5rem;
+  .content h1{
+    font-size: 27px;
     text-align: right;
   }
   .post-link{
@@ -500,6 +502,10 @@ a {
   .title.is-1 {
     margin-top: 25px;
     font-size: 25.6px;
+    text-align: right;
+  }
+  .single-container .title{
+    text-align: left;
   }
   .about-content{
     font-size: 16px;
@@ -508,11 +514,10 @@ a {
   .navbar-brand {
     height: 6vh;
   }
-
-  .navbar-menu{
-    background-color: var(--main-light);
-    font-size: 16px;
+  .column{
+    font-size: 13px;
   }
+
   .navbar-item{
     text-align: center;
   }
@@ -521,6 +526,7 @@ a {
   }
   .artical-content h1{
     font-size: 25.6px;
+    text-align: left;
   }
   .artical-content h2{
     font-size: 24px;
