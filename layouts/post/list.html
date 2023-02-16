@@ -2,14 +2,14 @@
 <div class="container">
     <div class="section">
         <div class="content">
-            <h1>Archives</h1>
+            <h1 class="h1-title">Archives</h1>
         </div>
     </div>
 </div>
 
     <div class="archive-container column is-centered">
         <div class="archive">
-            
+
             {{ range (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.draft" "!=" true).GroupByDate "2006" }}
             <h2 class="archive-title">{{ .Key }}</h2>
             {{ range .Pages }}

@@ -107,29 +107,9 @@ footer {
 
 
 
-/* 这个是为了给果汁图标单独加一个框框,使得其他图标的外框不会跟着它一起变大 */
-.field {
-  align-items: center
-}
-
-/* 设置果汁图标大小 */
-svg.icon {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  height: 2.8rem;
-  width: 2.8rem;
-}
-
 h1 {
   font-weight: 600;
 }
-
-.navbar-burger,
-.navbar-item {
-  margin: auto;
-}
-
 
 .footer {
   padding: 18px;
@@ -373,8 +353,12 @@ button {
   background-color: var(--main-light);
 }
 
-
-
+.has-text-left a{
+  font-weight: bolder;
+}
+.has-text-right a{
+  font-weight: bolder;
+}
 .typewriter-effect {
   display: flex;
   justify-content: center;
@@ -429,9 +413,8 @@ li a .title {
   padding-left: 0.5rem;
   font-weight: normal;
 }
-
+/*打字机效果*/
 @keyframes typing {
-
   75%,
   100% {
     max-width: calc(var(--characters) * 1ch);
@@ -462,7 +445,16 @@ li a .title {
 }
 
 .about-content {
-  font-size: var(--font-size-content-larger);
+  font-size:1rem
+}
+.column{
+  font-size: 13px;
+}
+.author-info{
+  display: flex;
+}
+.toc-container{
+  display: none;
 }
 
 a {
@@ -483,16 +475,20 @@ a {
   width: 15vw;
   bottom: 50px;
 }
-/*.navbar-item {*/
-/*  height: 6vh;*/
-/*}*/
 
 @media (max-width: 768px) {
+  html{
+    font-size: 16px;
+  }
+  .navbar-brand {
+    padding:0
+  }
   .post-toc {
     display: none;
   }
-  .content h2{
+  .h1-title{
     font-size: 1.5rem;
+    text-align: right;
   }
   .post-link{
     font-size: var(--font-size-content);
@@ -502,25 +498,48 @@ a {
   }
 
   .title.is-1 {
-    font-size: var(--font-size-article-title-mobile);
+    margin-top: 25px;
+    font-size: 25.6px;
   }
-
-  /*.navbar-item {*/
-  /*  height: 2rem;*/
-  /*}*/
-
+  .about-content{
+    font-size: 16px;
+  }
   .navbar,
   .navbar-brand {
-    height: 10vh;
+    height: 6vh;
   }
 
+  .navbar-menu{
+    background-color: var(--main-light);
+    font-size: 16px;
+  }
+  .navbar-item{
+    text-align: center;
+  }
   .section {
     padding-bottom: 3rem;
   }
-
+  .artical-content h1{
+    font-size: 25.6px;
+  }
+  .artical-content h2{
+    font-size: 24px;
+  }
+  .artical-content h3{
+    font-size: 22px;
+  }
+  .artical-content h4{
+    font-size: 20px;
+  }
+  .artical-content h5{
+    font-size: 18px;
+  }
+  .artical-content h6{
+    font-size: 17px;
+  }
 
   .archive-title {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: bold;

@@ -57,19 +57,15 @@
 
     </div>
 </nav>
-{{/*  这段jq功能是使汉堡图标工作。  */}}
+
 <script>
-    $(document).ready(function () {
-        $(".navbar-burger").click(function () {
-            {
-                {
-                    /*  toggleClass括号里是布尔值，为true则显示，为false则隐藏  */
-                }
-            }
-            $(".navbar-burger").toggleClass("is-active");
-            $(".navbar-menu").toggleClass("is-active");
-        })
-    })
+    document.addEventListener('DOMContentLoaded', function() {
+        var burger = document.querySelector('.navbar-burger');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+        });
+    });
 </script>
 
 </header>
