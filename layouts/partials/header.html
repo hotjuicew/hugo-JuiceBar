@@ -19,6 +19,11 @@
                 </span>
             </a>
 
+            <!-- 太阳图标 -->
+            <a id="theme-toggle" class="theme-toggle" href="javascript:void(0)">
+                ☀️
+            </a>
+
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -54,6 +59,7 @@
 </nav>
 
 <script>
+    //移动端的汉堡图标
     document.addEventListener('DOMContentLoaded', function() {
         var burger = document.querySelector('.navbar-burger');
         burger.addEventListener('click', function() {
@@ -61,6 +67,37 @@
             document.querySelector('.navbar-menu').classList.toggle('is-active');
         });
     });
+
+    // 主题色切换
+    function setTheme(theme) {
+        let body = document.body;
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            document.getElementById("theme-toggle").innerHTML = "🌙"; // 切换为月亮图标
+        } else {
+            body.classList.remove("dark-mode");
+            document.getElementById("theme-toggle").innerHTML = "☀️"; // 切换为太阳图标
+        }
+        // 将用户选择的主题模式保存到本地存储中
+        localStorage.setItem("theme", theme);
+    }
+
+    // 从本地存储中读取用户选择的主题模式
+    let theme = localStorage.getItem("theme") || "light";
+    setTheme(theme);
+
+    // 当太阳图标被点击时，切换主题
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        setTheme(theme);
+    });
+
+
+
 </script>
 
 </header>
