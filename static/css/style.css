@@ -19,7 +19,9 @@
   font-family: Inter,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   font-size: var(--font-size-article-title);
 }
-
+.heading{
+  text-transform: none;
+}
 
 /* sticky footer */
 body {
