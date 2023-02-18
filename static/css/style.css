@@ -281,6 +281,32 @@ navbar .navbar.is-light .navbar-end>a.navbar-item.is-active,
   background-color: var(--main-light);
   border-radius: 24px;
 }
+/*toc*/
+.post-toc {
+  margin-left: 16px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.post-toc ul,.post-toc li{
+  list-style: none;
+}
+.post-toc nav{
+  font-weight: bold;
+}
+.post-toc nav>ul>li>a::before{
+  content: "┃";
+  color: var(--main-orange);
+}
+.post-toc ul>li>ul>li :first-child::before{
+  content: "┃";
+  color: #fded01;
+}
+.post-toc a :last-child{
+  margin-left: 5px;
+}
 
 p {
   font-weight: normal;
@@ -457,9 +483,7 @@ li a .title {
 .author-info{
   display: flex;
 }
-.toc-container{
-  display: none;
-}
+
 
 a {
   color: var(--main-black);
