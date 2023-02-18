@@ -708,3 +708,8 @@ a {
 .dark-mode .card{
   background-color: var(--dark-navbar);
 }
+.dark-mode .button{
+  background-color: var(--dark-navbar);
+  color: var(--dark-font);
+  border-color: var(--dark-navbar);
+}
