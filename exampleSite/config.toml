@@ -1,0 +1,47 @@
+baseURL = 'https://juicebar-demo.add1.dev'
+languageCode = 'zh-CN'
+theme = "JuiceBar"
+title = "JuiceBar"
+
+[params]
+author = "hotjuicew"
+description = "My site description"
+authorImage = "/images/profile.jpg"
+paginate = 5
+
+Title = "JuiceBar"
+content = "I'm JuiceBar, nice to meet you(ˊ˘ˋ*)♡"
+imageUrl = "/images/avatar.jpg"
+#添加新的社交图标
+[[params.social]]
+name = "Github"
+url = "https://github.com/hotjuicew"
+[[params.social]]
+name = "telegram"
+url = "https://t.me/Hotjuice"
+[[params.social]]
+name = "twitter"
+url = "https://twitter.com/hotjuicee"
+[[params.social]]
+name = "email"
+url = "mailto:imjiaying@outlook.com"
+
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+# 添加新的导航链接
+[[menu.main]]
+name = "About"
+url = "/about"
+[[menu.main]]
+name = "Blog"
+url = "/post"
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+
+
+
+
