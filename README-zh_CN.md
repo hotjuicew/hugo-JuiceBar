@@ -29,8 +29,6 @@ JuiceBar 是一个简洁、优雅的博客主题，由 [Hugo](https://gohugo.io)
 
 ```
 $ git submodule add https://github.com/hotjuicew/hugo-JuiceBar.git themes/JuiceBar
-$ git submodule init
-$ git submodule update
 ```
 
 现在，您可以通过更新子模块来获取以后对 hugo-JuiceBar 的更新：

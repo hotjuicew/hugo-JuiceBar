@@ -5,6 +5,7 @@ English | [简体中文](https://github.com/hotjuicew/hugo-juicebar/tree/master/
 JuiceBar is a concise, elegan blog theme powered by [Hugo](https://gohugo.io).
 
 This theme drew a lot of inspiration from PapermMod and LoveIt, and credit is due to their excellent work.
+
 ⭐Demo → [juicebar-demo.add1.dev](https://juicebar-demo.add1.dev)
 
 <hr />
@@ -31,8 +32,6 @@ I recommend the latter. From the root of your Hugo site, type the following:
 
 ```
 $ git submodule add https://github.com/hotjuicew/hugo-JuiceBar.git themes/JuiceBar
-$ git submodule init
-$ git submodule update
 ```
 
 Now you can get updates to hugo-JuiceBar in the future by updating the submodule:
