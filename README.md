@@ -1,13 +1,17 @@
 
 # JuiceBar
 English | [简体中文](https://github.com/hotjuicew/hugo-juicebar/tree/master/README-zh_CN.md)
+
 JuiceBar is a concise, elegan blog theme powered by [Hugo](https://gohugo.io).
 
 This theme drew a lot of inspiration from PapermMod and LoveIt, and credit is due to their excellent work.
 ⭐Demo → [juicebar-demo.add1.dev](https://juicebar-demo.add1.dev)
 
 <hr />
----
+
+## Overview
+![](https://github.com/hotjuicew/hugo-JuiceBar/blob/master/images/screenshot.png)
+
 ## Features
 
 - Theming: **dark/light mode**, depending on your system preferences or the users choice
@@ -98,3 +102,5 @@ $ cp themes/hugo-JuiceBar/exampleSite/config.toml .
 Now edit this file and add your own information. Note that some fields can be omitted.
 
 I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
+
+Finally, just run `$ hugo new content/about.md` to create your 'About' page, and `$ hugo new content/post/title.md` to create your first blog post.

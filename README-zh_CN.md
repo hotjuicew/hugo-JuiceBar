@@ -1,5 +1,6 @@
 # JuiceBar
 [English](https://github.com/hotjuicew/hugo-juicebar/tree/master/README.md) | 简体中文
+
 JuiceBar 是一个简洁、优雅的博客主题，由 [Hugo](https://gohugo.io) 强力驱动。
 
 这个主题从 PapermMod 和 LoveIt 获得了很多灵感，感谢！
@@ -7,7 +8,8 @@ JuiceBar 是一个简洁、优雅的博客主题，由 [Hugo](https://gohugo.io)
 ⭐Demo → [juicebar-demo.add1.dev](https://juicebar-demo.add1.dev)
 
 ---
-
+## 预览
+![](https://github.com/hotjuicew/hugo-JuiceBar/blob/master/images/screenshot.png)
 ## 特点
 
 - 主题：根据您的系统偏好或用户选择，**黑/白主题**。
@@ -101,3 +103,5 @@ $ cp themes/hugo-JuiceBar/exampleSite/config.toml。
 现在编辑此文件并添加您自己的信息。请注意，有些字段可以省略。
 
 我建议您使用主题的原型，因此现在删除您站点的`archetypes/default.md`。
+
+最后，只需运行 `$ hugo new content/about.md` 创建你的 '关于' 页面，以及 `$ hugo new content/post/title.md` 创建你的第一篇博客文章。

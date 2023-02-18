@@ -1,11 +1,13 @@
-<div class="post-toc">
-    {{ if and (gt .WordCount 80 ) (.Params.toc | default true ) }} <!-- 关键是这一行 -->
-    <aside>
-        <h4 style="margin-left: 1vw;">CONTENTS</h4>
-        {{- $toc := .TableOfContents -}}
-        {{- $toc := replaceRE `<ul>\n<li>\n<ul>` `<ul>` $toc -}}
-        {{- safeHTML $toc -}}
-
-    </aside>
-    {{ end }}
+{{- $toc := .TableOfContents -}}
+{{- if $toc -}}
+    <!-- 当 $toc 变量不为空时，生成文章目录 -->
+    <div class="post-toc">
+        {{ if and (gt .WordCount 80) (.Params.toc | default true) }}
+            <aside>
+                <h4 style="margin-left: 1vw;">CONTENTS</h4>
+                {{- $toc := replaceRE `<ul>\n<li>\n<ul>` `<ul>` $toc -}}
+                {{- safeHTML $toc -}}
+            </aside>
+        {{ end }}
     </div>
+{{- end -}}
