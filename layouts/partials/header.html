@@ -8,10 +8,9 @@
             </a>
 
             <!-- sun icon -->
-            <a id="theme-toggle" class="theme-toggle" href="javascript:void(0)">
-                <img src="svg/sun.svg" alt="sun icon" class="theme-icon" />
+            <a id="theme-toggle" class="theme-toggle" href="#">
+                <img src="{{ .Site.BaseURL }}svg/sun.svg" alt="sun icon" class="theme-icon" />
             </a>
-
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -35,7 +34,7 @@
 
                 </ul>
             </div>
-            <a id="search-btn" style="display: inline-block;" href="javascript:void(0); ">
+            <a id="search-btn" style="display: inline-block;" href="# ">
                 <div class="icon-search"><svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
             </a>
         </div>
@@ -62,11 +61,11 @@
         let themeIcon = document.querySelector(".theme-icon");
         if (theme === "dark") {
             body.classList.add("dark-mode");
-            themeIcon.src = "svg/moon.svg";
+            themeIcon.src = "{{ .Site.BaseURL }}svg/moon.svg";
             themeIcon.alt = "moon icon";
         } else {
             body.classList.remove("dark-mode");
-            themeIcon.src = "svg/sun.svg";
+            themeIcon.src = "{{ .Site.BaseURL }}svg/sun.svg";
             themeIcon.alt = "sun icon";
         }
         // Save the user-selected theme mode to local storage.
