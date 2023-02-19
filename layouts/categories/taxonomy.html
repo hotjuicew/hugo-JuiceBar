@@ -1,19 +1,14 @@
-{{/*  单个类别的布局  */}}
 {{ define "main" }}
-
-
-
-
 <div class="container">
     <div class="section">
-        <h2 class="archive-title">Category: {{ .Title }}</h2>    
+        <h2 class="archive-title">Category: {{ .Title }}</h2>
 </div>
 </div>
 <div class="each-category column is-centered">
-    
-    
+
+
     {{ range  .Paginator.Pages}}
-   
+
         <article class="archive-item">
             <a href="{{ .Permalink }}" class="archive-item-link hover-underline-animation">{{ .Title }}</a>
             <span class="archive-item-date">
@@ -21,12 +16,8 @@
             </span>
 
         </article>
-    
+
     {{ end }}
-    
+
 </div>
-
-   
-
-
 {{ end }}

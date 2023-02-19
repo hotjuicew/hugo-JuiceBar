@@ -1,6 +1,6 @@
 {{- $toc := .TableOfContents -}}
 {{- if $toc -}}
-    <!-- 当 $toc 变量不为空时，生成文章目录 -->
+    <!-- When the $toc variable is not empty, generate the table of contents for the article -->
     <div class="post-toc">
         {{ if and (gt .WordCount 80) (.Params.toc | default true) }}
             <aside>
