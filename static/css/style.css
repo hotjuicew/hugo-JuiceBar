@@ -384,6 +384,12 @@ button {
   border: none;
   background-color: var(--main-light);
 }
+.social-icon span{
+  position: relative;
+}
+.social-icon svg{
+height: 100%;
+}
 
 .has-text-left a{
   font-weight: bolder;
