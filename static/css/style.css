@@ -667,7 +667,7 @@ a {
   border-left: 1px solid var(--dark-font);
   border-right: 1px solid var(--dark-font);
 }
-#searchResults li:first-child{
+.dark-mode #searchResults li:first-child{
   border-top: 1px solid var(--dark-font);
 }
 .dark-mode #searchResults li:hover{
