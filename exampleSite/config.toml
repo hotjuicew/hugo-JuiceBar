@@ -12,7 +12,7 @@ paginate = 5
 Title = "JuiceBar"
 content = "I'm JuiceBar, nice to meet you(ˊ˘ˋ*)♡"
 imageUrl = "/images/avatar.jpg"
-#添加新的社交图标
+# To add a new social icon
 [[params.social]]
 name = "Github"
 url = "https://github.com/hotjuicew"
@@ -29,9 +29,8 @@ url = "mailto:imjiaying@outlook.com"
 
 [taxonomies]
 category = "categories"
-tag = "tags"
 
-# 添加新的导航链接
+# To add a new navigation link
 [[menu.main]]
 name = "About"
 url = "/about"
@@ -42,6 +41,9 @@ url = "/post"
 name = "Categories"
 url = "/categories"
 
+# Used for outputting the documentation (required).
+[outputs]
+home = ["HTML", "RSS", "JSON"]
 
 
 

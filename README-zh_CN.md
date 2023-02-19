@@ -85,6 +85,10 @@ url = "/post"
 [[menu.main]]
 name = "Categories"
 url = "/categories"
+
+#用于输出文档的设置（必须的）
+[outputs]
+home = ["HTML", "RSS", "JSON"]
 ```
 
 

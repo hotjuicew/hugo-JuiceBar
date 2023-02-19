@@ -59,7 +59,7 @@ Title = "your_blog_title"
 content = "I'm JuiceBar, nice to meet you(ˊ˘ˋ*)♡"
 imageUrl = "/images/avatar.jpg"
 
-#To add a new social icon
+# To add a new social icon
 [[params.social]]
 name = "Github"
 url = "https://github.com/hotjuicew"
@@ -78,7 +78,7 @@ url = "mailto:hotjuicew@outlook.com"
 category = "categories"
 tag = "tags"
 
-#To add a new navigation link
+# To add a new navigation link
 [[menu.main]]
 name = "About"
 url = "/about"
@@ -88,6 +88,10 @@ url = "/post"
 [[menu.main]]
 name = "Categories"
 url = "/categories"
+
+# Used for outputting the documentation (required).
+[outputs]
+home = ["HTML", "RSS", "JSON"]
 ```
 Note: There are more options to configure. Take a look into the `config.toml` in `exampleSite`.
 
