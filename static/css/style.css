@@ -201,8 +201,7 @@ h1 {
   margin: 0 0.3rem;
 }
 
-.icon:hover,
-.search-svg:hover {
+.icon:hover, .search-svg:hover {
   color: var(--main-orange);
   transform: scale(1.2);
   transition: all 0.2s linear;
@@ -718,4 +717,10 @@ a {
   background-color: var(--dark-navbar);
   color: var(--dark-font);
   border-color: var(--dark-navbar);
+}
+.dark-mode .navbar.is-light .navbar-burger{
+  color: var(--dark-font);
+}
+.dark-mode .icon:hover {
+  color: var(--main-orange);
 }
