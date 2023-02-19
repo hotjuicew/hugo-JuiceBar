@@ -9,7 +9,7 @@
 
             <!-- sun icon -->
             <a id="theme-toggle" class="theme-toggle" href="javascript:void(0)">
-                ☀️
+                <img src="svg/sun.svg" alt="sun icon" class="theme-icon" />
             </a>
 
 
@@ -59,12 +59,15 @@
     // theme color switch
     function setTheme(theme) {
         let body = document.body;
+        let themeIcon = document.querySelector(".theme-icon");
         if (theme === "dark") {
             body.classList.add("dark-mode");
-            document.getElementById("theme-toggle").innerHTML = "🌙"; // 切换为月亮图标
+            themeIcon.src = "svg/moon.svg";
+            themeIcon.alt = "moon icon";
         } else {
             body.classList.remove("dark-mode");
-            document.getElementById("theme-toggle").innerHTML = "☀️"; // 切换为太阳图标
+            themeIcon.src = "svg/sun.svg";
+            themeIcon.alt = "sun icon";
         }
         // Save the user-selected theme mode to local storage.
         localStorage.setItem("theme", theme);
