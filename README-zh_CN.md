@@ -56,7 +56,8 @@ Title = "your_blog_title"
 content = "I'm JuiceBar, nice to meet you(ˊ˘ˋ*)♡"
 imageUrl = "/images/avatar.jpg"
 
-#添加新的社交图标
+# 添加新的社交图标
+# 更多社交图标可以在JuiceBar\layouts\partials\svg.html中找到
 [[params.social]]
 name = "Github"
 url = "https://github.com/hotjuicew"
@@ -69,7 +70,18 @@ url = "https://twitter.com/hotjuicee"
 [[params.social]]
 name = "email"
 url = "mailto:hotjuicew@outlook.com"
-
+[[params.social]]
+name = "instagram"
+url = "your_url"
+[[params.social]]
+name = "mastodon"
+url = "your_url"
+[[params.social]]
+name = "reddit"
+url = "your_url"
+[[params.social]]
+name = "stackoverflow"
+url = "your_url"
 
 [taxonomies]
 category = "categories"
@@ -85,6 +97,7 @@ url = "/post"
 [[menu.main]]
 name = "Categories"
 url = "/categories"
+
 
 #用于输出文档的设置（必须的）
 [outputs]

@@ -59,7 +59,8 @@ Title = "your_blog_title"
 content = "I'm JuiceBar, nice to meet you(ˊ˘ˋ*)♡"
 imageUrl = "/images/avatar.jpg"
 
-# To add a new social icon
+# To add a new social icon 
+# More social icons can be found in JuiceBar\layouts\partials\svg.html.
 [[params.social]]
 name = "Github"
 url = "https://github.com/hotjuicew"
@@ -72,7 +73,18 @@ url = "https://twitter.com/hotjuicee"
 [[params.social]]
 name = "email"
 url = "mailto:hotjuicew@outlook.com"
-
+[[params.social]]
+name = "instagram"
+url = "your_url"
+[[params.social]]
+name = "mastodon"
+url = "your_url"
+[[params.social]]
+name = "reddit"
+url = "your_url"
+[[params.social]]
+name = "stackoverflow"
+url = "your_url"
 
 [taxonomies]
 category = "categories"

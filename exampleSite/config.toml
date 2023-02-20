@@ -1,5 +1,6 @@
-baseURL = 'https://juicebar-demo.add1.dev'
-languageCode = 'zh-CN'
+baseURL = 'https://juicebar-demo.add1.dev/'
+languageCode = 'en'
+# languageCode = 'zh-CN'
 theme = "JuiceBar"
 title = "JuiceBar"
 
@@ -12,7 +13,7 @@ paginate = 5
 Title = "JuiceBar"
 content = "I'm JuiceBar, nice to meet you(ˊ˘ˋ*)♡"
 imageUrl = "/images/avatar.jpg"
-# To add a new social icon
+# To add a new social icon (More social icons can be found in JuiceBar\layouts\partials\svg.html.)
 [[params.social]]
 name = "Github"
 url = "https://github.com/hotjuicew"
