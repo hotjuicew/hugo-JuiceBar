@@ -801,3 +801,7 @@ a {
 main a {
     color: #6086b4;
 }
+/* Let the sun icon not be next to the top*/
+.theme-toggle {
+    margin-top: 5px;
+}
