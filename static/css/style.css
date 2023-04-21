@@ -14,7 +14,7 @@
     --font-size-archive-title: 1.9rem;
 }
 
-/* 标题样式 */
+
 .title.is-1 {
     font-family: Inter, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: var(--font-size-article-title);
@@ -67,7 +67,7 @@ footer {
 }
 
 
-/* 将标题图像与文章的正文分开一点 */
+/* Separate the title image a bit from the body of the article */
 .title-image {
     padding-bottom: 2em;
 }
@@ -209,7 +209,7 @@ h1 {
     transform: scale(1.2);
     transition: all 0.2s linear;
 }
-
+/* Rewrite some of bulma's styles */
 .navbar.is-light .navbar-end .navbar-link.is-active,
 .navbar.is-light .navbar-end .navbar-link:hover,
 navbar .navbar.is-light .navbar-end > a.navbar-item.is-active,
@@ -795,4 +795,9 @@ a {
 .dark-mode .navbar.is-light .navbar-brand>a.navbar-item:hover,.dark-mode .navbar.is-light .navbar-start > a.navbar-item:hover{
     background-color: var(--dark-navbar);
     color: var(--dark-font);
+}
+
+/* color hyperlink */
+main a {
+    color: #6086b4;
 }
