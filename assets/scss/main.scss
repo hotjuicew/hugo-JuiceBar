@@ -540,7 +540,7 @@ a {
         padding: 0
     }
 
-    .post-toc {
+    .toc-container {
         display: none;
     }
 
@@ -801,7 +801,13 @@ a {
 main a {
     color: #6086b4;
 }
+
 /* Let the sun icon not be next to the top*/
 .theme-toggle {
     margin-top: 5px;
+}
+/* Solve the problem that mobile pages generate shadows when clicking on icons or buttons */
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }

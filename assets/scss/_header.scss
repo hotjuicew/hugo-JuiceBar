@@ -1,0 +1,17 @@
+.navbar {
+  height: 6vmin;
+  .navbar-brand {
+    padding: 0px 15px;
+    .logo h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+.author-avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+}

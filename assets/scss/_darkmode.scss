@@ -1,0 +1,130 @@
+@import "_variables";
+.dark-mode {
+  color: $dark-font;
+  background-color: $dark-background;
+}
+
+.dark-mode .navbar.is-light {
+  background-color: $dark-navbar;
+  color: $dark-font;
+}
+
+.dark-mode .navbar.is-light {
+  background-color: $dark-navbar;
+  color: $dark-font;
+}
+
+.dark-mode .navbar.is-light {
+  color: $dark-font;
+}
+
+.dark-mode .navbar.is-light .navbar-brand > .navbar-item {
+  color: $dark-font;
+  background-color: $dark-navbar;
+}
+
+.dark-mode .navbar.is-light .navbar-start > .navbar-item {
+  color: $dark-font;
+}
+
+.dark-mode .navbar-menu {
+  background-color: $dark-navbar;
+  color: $dark-font;
+}
+
+.dark-mode a {
+  color: $dark-font;
+}
+
+.dark-mode .title {
+  color: $dark-font;
+}
+
+.dark-mode .icon {
+  color: $dark-font;
+}
+
+.dark-mode #searchResults li {
+  background-color: $dark-navbar;
+  border-bottom: 1px solid $dark-font;
+  border-left: 1px solid $dark-font;
+  border-right: 1px solid $dark-font;
+}
+
+.dark-mode #searchResults li:first-child {
+  border-top: 1px solid $dark-font;
+}
+
+.dark-mode #searchResults li:hover {
+  color: $dark-font;
+  background-color: $dark-background;
+}
+
+
+.dark-mode #post-container {
+  background-color: $dark-navbar;
+  color: $dark-font;
+}
+
+.dark-mode hr {
+  background-color: $dark-navbar;
+}
+
+.dark-mode .footer {
+  background-color: $dark-navbar;
+}
+
+.dark-mode .archive {
+  color: $dark-font;
+}
+
+.dark-mode .content h1, .dark-mode .content h2, .dark-mode .content h3, .dark-mode .content h4, .dark-mode .content h5, .dark-mode .content h6 {
+  color: $dark-font;
+}
+
+.dark-mode code {
+  background-color: $dark-background;
+}
+
+.dark-mode .content blockquote {
+  color: $dark-font;
+  background-color: $dark-background;
+}
+
+.dark-mode strong {
+  color: white;
+}
+
+.dark-mode .content table thead td, .dark-mode .content table thead th {
+  color: $dark-font;
+}
+
+.dark-mode .card {
+  background-color: $dark-navbar;
+}
+
+.dark-mode .button {
+  background-color: $dark-navbar;
+  color: $dark-font;
+  border-color: $dark-navbar;
+}
+
+.dark-mode .navbar.is-light .navbar-burger {
+  color: $dark-font;
+}
+
+.dark-mode .icon:hover {
+  color: $main-orange;
+}
+
+.dark-mode pre {
+  color: #f8f8f2;
+  background-color: #272822;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+.dark-mode .navbar.is-light .navbar-brand>a.navbar-item:hover,.dark-mode .navbar.is-light .navbar-start > a.navbar-item:hover{
+  background-color: $dark-navbar;
+  color: $dark-font;
+}
