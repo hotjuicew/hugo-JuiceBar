@@ -19,7 +19,7 @@
       text-align: right;
     }
 
-    .article-content{
+    .article-content > :not(.toc-container){
       a{
         color: #6086b4;
       }
