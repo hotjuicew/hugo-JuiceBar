@@ -7,7 +7,9 @@
         content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }}">
     <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | relURL }}">
+    {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
+
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     {{ if not (in (string .Site.BaseURL) "localhost") }}

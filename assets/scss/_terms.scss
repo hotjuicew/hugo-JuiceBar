@@ -1,0 +1,38 @@
+
+.card-container {
+  display: flex;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .card {
+    height: 72px;
+    width: auto;
+    margin: 2rem;
+    border-radius: 6%;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s linear;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .card-container {
+    display: flex;
+    padding: 0 20vw;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 1rem;
+
+  }
+}
+
+
+

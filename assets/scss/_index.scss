@@ -1,0 +1,94 @@
+@import "variables";
+
+#home-box {
+  flex-direction: column;
+  justify-content: center;
+
+  #home-title {
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: $font-size-content;
+  }
+
+  .typewriter-effect {
+    display: flex;
+    justify-content: center;
+
+    .text {
+      max-width: 0;
+      text-transform: capitalize;
+      animation: typing 3s steps(var(--characters)) infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &:after {
+      content: " |";
+      animation: blink 1s infinite;
+      animation-timing-function: step-end;
+    }
+  }
+
+  //Override bulma's style
+  .avatar-container {
+    text-align: center;
+
+    .author-avatar {
+      object-fit: cover;
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+      text-align: center;
+      margin: 2rem auto 0 auto;
+    }
+  }
+
+  .social-icon {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    span {
+      position: relative;
+    }
+
+    svg {
+      height: 100%;
+    }
+  }
+
+}
+
+/*Typewriter effect*/
+@keyframes typing {
+  75%,
+  100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
+
+@keyframes blink {
+  0%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+/* Rewrite some of bulma's styles */
+.navbar.is-light .navbar-end .navbar-link.is-active,
+.navbar.is-light .navbar-end .navbar-link:hover,
+navbar .navbar.is-light .navbar-end > a.navbar-item.is-active,
+.navbar.is-light .navbar-end > a.navbar-item:hover,
+.navbar.is-light .navbar-start .navbar-link.is-active,
+.navbar.is-light .navbar-start .navbar-link:hover,
+.navbar.is-light .navbar-start > a.navbar-item.is-active,
+.navbar.is-light .navbar-start > a.navbar-item:hover, .navbar.is-light .navbar-brand > a.navbar-item:hover {
+  background-color: $main-light;
+  color: $main-black;
+}

@@ -1,0 +1,45 @@
+@import "variables";
+
+.post-toc {
+  margin-left: 16px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.post-toc ul, .post-toc li {
+  list-style: none;
+}
+
+.post-toc nav {
+  font-weight: bold;
+}
+
+.post-toc nav > ul > li > a::before {
+  content: "┃";
+  color: $main-orange;
+}
+
+.post-toc ul > li > ul > li :first-child::before {
+  content: "┃";
+  color: #fded01;
+}
+
+.post-toc a :last-child {
+  margin-left: 5px;
+}
+#TableOfContents a:hover, #TableOfContents a:active {
+  color: $main-orange;
+}
+.toc-container {
+  position: fixed;
+  right: 5vw;
+  overflow: auto;
+  top: 100px;
+  width: 15vw;
+  bottom: 50px;
+  @media (max-width: 768px){
+    display: none;
+  }
+}

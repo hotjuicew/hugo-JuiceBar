@@ -4,8 +4,6 @@
     <div class="is-centered">
             <div class="title subtitle heading is-6">
                 <div id="home-box" >
-                    <div class="">
-                        <div class="avatar-container">
                             {{ with .imageUrl }}
                             <div class="avatar-container">
                                 <img src="{{.}}" class="author-avatar">
@@ -13,12 +11,10 @@
                             </div>
                             {{ end }}
 
-                        </div>
 
-                    </div>
 
                         <h1 id="home-title" class="title is-1 ">{{ .Title }}</h1>
-                    <div class="discription column content typewriter-effect">
+                    <div class="description column content typewriter-effect">
                         <div class="text" id="typewriter-text"> {{ .Content }}</div>
 
                     </div>

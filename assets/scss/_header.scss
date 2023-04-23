@@ -1,17 +1,147 @@
+@import "variables";
+
 .navbar {
   height: 6vmin;
+  @media (max-width: 768px) {
+    height: 6vh;
+  }
+
   .navbar-brand {
     padding: 0px 15px;
+    @media (max-width: 768px) {
+      padding: 0;
+      height: 6vh;
+    }
+
     .logo h1 {
       font-size: 1.5rem;
     }
+
+    /* Let the sun icon not be next to the top*/
+    .theme-toggle {
+      margin-top: 5px;
+    }
+  }
+
+  .navbar-menu {
+    background-color: $main-light;
+    font-size: 1.1rem;
+
+  }
+  .dark-mode .navbar-menu {
+    background-color: $dark-navbar;
+    color: $dark-font;
+  }
+
+  .search {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  #fastSearch {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+  }
+
+  #searchInput {
+    height: 100%;
+    flex-shrink: 0
+  }
+
+  #searchResults {
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 5px;
+
+    li {
+      background-color: $main-light;
+      padding-left: 1rem;
+      border-bottom: 1px solid $main-black;
+      border-left: 1px solid $main-black;
+      border-right: 1px solid $main-black;
+
+      &:hover {
+        background-color: $main-grey;
+      }
+
+      &:first-child {
+        border-top: 1px solid $main-black;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      a .title {
+        text-decoration: none;
+        /*display: block;*/
+        font-size: $font-size-content;
+        padding-left: 0.5rem;
+        font-weight: normal;
+      }
+    }
   }
 }
-.author-avatar {
-  object-fit: cover;
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  text-align: center;
-  margin: 2rem auto 0 auto;
+
+.navbar-item {
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 }
+.dark-mode {
+  .navbar.is-light  {
+    background-color: $dark-navbar;
+    color: $dark-font;
+    .navbar-menu{
+      background-color: $dark-navbar;
+      color: $dark-font;
+    }
+    .navbar-brand > .navbar-item {
+      color: $dark-font;
+      background-color: $dark-navbar;
+    }
+
+    .navbar-start > .navbar-item {
+      background-color: $dark-navbar;
+      color: $dark-font;
+    }
+  }
+
+}
+.dark-mode #searchResults li {
+  background-color: $dark-navbar;
+  border-bottom: 1px solid $dark-font;
+  border-left: 1px solid $dark-font;
+  border-right: 1px solid $dark-font;
+}
+
+.dark-mode #searchResults li:first-child {
+  border-top: 1px solid $dark-font;
+}
+
+.dark-mode #searchResults li:hover {
+  color: $dark-font;
+  background-color: $dark-background;
+}
+
+.dark-mode .navbar.is-light .navbar-burger {
+  color: $dark-font;
+}
+.dark-mode .navbar.is-light .navbar-brand > a.navbar-item:hover, .dark-mode .navbar.is-light .navbar-start > a.navbar-item:hover {
+  background-color: $dark-navbar;
+  color: $dark-font;
+}
+
+
+
+
