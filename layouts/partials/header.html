@@ -74,6 +74,15 @@
 
     // Retrieve the user-selected theme mode from local storage
     let theme = localStorage.getItem("theme") || "light";
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        // Site is in dark mode
+        setTheme('dark');
+
+    } else {
+        // Site is in light mode
+        setTheme('light');
+    }
     setTheme(theme);
 
     // Toggle theme when sun icon is clicked
