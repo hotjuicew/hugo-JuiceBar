@@ -168,6 +168,36 @@ a {
   }
 }
 
+.title,
+.archive-title {
+  font-size: $font-size-archive-title;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.archive-item {
+  margin: 5px 0 15px;
+  padding: 0;
+
+}
+
+.archive-item-date {
+  color: $main-grey;
+  font-size: $font-size-content;
+  padding: 5px 0;
+  margin-top: 5px;
+  float: right;
+}
+.archive-item-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: $font-size-content-larger;
+  color: #222;
+  padding: 5px 0;
+  transition: all 0.1s linear;
+
+}
 
 @media (max-width: 768px) {
   html {
