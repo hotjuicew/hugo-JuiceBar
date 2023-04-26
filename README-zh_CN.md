@@ -20,6 +20,7 @@ JuiceBar 是一个简洁、优雅的博客主题，由 [Hugo](https://gohugo.io)
 - 易于使用的自扩展目录toc
 - 自动突出显示代码
 - 自定义脚本短代码
+- 支持 [giscus](https://giscus.app/) 评论系统
 
 ## 如何开始
 
@@ -98,6 +99,18 @@ url = "/post"
 name = "Categories"
 url = "/categories"
 
+# 如果使用giscus评论系统
+#[params.giscus]
+#repo = "ENTER REPO HERE"
+#repoID = "ENTER REPO ID HERE"
+#category = "ENTER CATEGORY NAME HERE"
+#categoryID = "ENTER CATEGORY ID HERE"
+#mapping = "og:title"
+#reactionsEnabled = "1"
+#emitMetadata = "0"
+#inputPosition = "bottom"
+#lang = "en"
+#loading = "lazy"
 
 #用于输出文档的设置（必须的）
 [outputs]

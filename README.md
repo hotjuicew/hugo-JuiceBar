@@ -23,6 +23,8 @@ This theme drew a lot of inspiration from PapermMod and LoveIt, and credit is du
 - Easy-to-use and self-expanding table of contents
 - Automatically highlighting code
 - Custom script shortcode
+- giscus comment system supported by giscus
+
 ## How to start
 
 
@@ -100,6 +102,19 @@ url = "/post"
 [[menu.main]]
 name = "Categories"
 url = "/categories"
+
+# If using the giscus commenting system
+#[params.giscus]
+#repo = "ENTER REPO HERE"
+#repoID = "ENTER REPO ID HERE"
+#category = "ENTER CATEGORY NAME HERE"
+#categoryID = "ENTER CATEGORY ID HERE"
+#mapping = "og:title"
+#reactionsEnabled = "1"
+#emitMetadata = "0"
+#inputPosition = "bottom"
+#lang = "en"
+#loading = "lazy"
 
 # Used for outputting the documentation (required).
 [outputs]
