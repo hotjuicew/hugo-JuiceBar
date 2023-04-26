@@ -1,0 +1,49 @@
+{{- if isset .Site.Params "giscus" -}}
+<hr style="border-top: 1px solid #EEEEEE;">
+<div id="comment"></div>
+<script>
+    const getStoredTheme = () => localStorage.getItem("theme") === "dark" ? "dark" : "light";
+
+    const setGiscusTheme = () => {
+        const sendMessage = (message) => {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (iframe) {
+                iframe.contentWindow.postMessage({giscus: message}, 'https://giscus.app');
+            }
+        }
+        sendMessage({setConfig: {theme: getStoredTheme()}})
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const giscusAttributes = {
+            "src": "https://giscus.app/client.js",
+            "data-repo": "{{ .Site.Params.giscus.repo }}",
+            "data-repo-id": "{{ .Site.Params.giscus.repoID }}",
+            "data-category": "{{ .Site.Params.giscus.category }}",
+            "data-category-id": "{{ .Site.Params.giscus.categoryID }}",
+            "data-mapping": "{{ default " pathname" .Site.Params.giscus.mapping }}",
+            "data-reactions-enabled": "{{ default "1" .Site.Params.giscus.reactionsEnabled }}",
+            "data-emit-metadata": "{{ default "0" .Site.Params.giscus.emitMetadata }}",
+            "data-input-position": "{{ default "bottom" .Site.Params.giscus.inputPosition }}",
+            "data-theme": getStoredTheme(),
+            "data-lang": "{{ default "en" .Site.Params.giscus.lang }}",
+            "data-loading": "{{ default "lazy" .Site.Params.giscus.loading }}",
+            "crossorigin": "anonymous",
+        };
+
+        // Dynamically create script tag.
+        const giscusScript = document.createElement("script");
+        Object.entries(giscusAttributes).forEach(
+            ([key, value]) => giscusScript.setAttribute(key, value));
+        document.getElementById("comment").appendChild(giscusScript);
+
+        // Update giscus theme when the theme switcher is clicked.
+        const themeToggle = document.querySelector(".theme-toggle");
+        if (themeToggle) {
+            themeToggle.addEventListener("click", setGiscusTheme);
+        }
+    });
+
+</script>
+{{end}}
+
