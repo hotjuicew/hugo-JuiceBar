@@ -47,6 +47,9 @@
   @media (max-width: 768px){
     position: static;
     width: auto;
+    #hide{
+      display: none;
+    }
     button{
       display: inline;
     }
