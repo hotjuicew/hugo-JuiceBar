@@ -4,7 +4,7 @@
     <div class="post-toc">
         {{ if and (gt .WordCount 80) (.Params.toc | default true) }}
             <aside>
-                <button id="tocButton" style="background-color: #fff;"><h4 id="contents" style="margin-left: 1vw;color:rgb(96, 134, 180);margin-bottom: 0;">CONTENTS</h4></button>
+                <button id="tocButton" ><h4 id="contents" style="margin-left: 1vw;color:rgb(96, 134, 180);margin-bottom: 0;">CONTENTS</h4></button>
                 <div id="hide">
                     {{- $toc := replaceRE `<ul>\n<li>\n<ul>` `<ul>` $toc -}}
                         {{- safeHTML $toc -}}
@@ -19,10 +19,8 @@
         let hide = document.getElementById("hide");
         let contents=document.getElementById("contents");
         button.addEventListener("click", function() {
-        if (contents.style.color==='rgb(96, 134, 180)') {
+        if (hide.style.display!='block') {
             hide.style.display='block'
-            contents.style.color='rgb(54, 54, 54)'
-            console.log('zhankai');
         } else {
             hide.style.display='none'
             contents.style.color='rgb(96, 134, 180)'

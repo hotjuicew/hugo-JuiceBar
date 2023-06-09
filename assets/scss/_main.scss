@@ -91,11 +91,11 @@ input:focus {
 
 button {
   border: none;
-  background-color: $main-light;
+  background-color: white;
 }
 
-.dark-mode .button {
-  background-color: $dark-navbar;
+.dark-mode button {
+  background-color: $dark-background;
   color: $dark-font;
   border-color: $dark-navbar;
 }
