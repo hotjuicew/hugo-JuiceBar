@@ -4,7 +4,7 @@
     <div class="post-toc">
         {{ if and (gt .WordCount 80) (.Params.toc | default true) }}
             <aside>
-                <h4 style="margin-left: 1vw;">CONTENTS  <button id="tocButton">▶</button></h4>
+                <button id="tocButton" style="background-color: #fff;"><h4 id="contents" style="margin-left: 1vw;color:rgb(96, 134, 180);margin-bottom: 0;">CONTENTS</h4></button>
                 <div id="hide">
                     {{- $toc := replaceRE `<ul>\n<li>\n<ul>` `<ul>` $toc -}}
                         {{- safeHTML $toc -}}
@@ -14,19 +14,21 @@
     </div>
 {{- end -}}
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    // document.addEventListener('DOMContentLoaded', function() {
         let button = document.getElementById('tocButton');
         let hide = document.getElementById("hide");
+        let contents=document.getElementById("contents");
         button.addEventListener("click", function() {
-        if (button.innerHTML === "▶") {
-            button.innerHTML = "▼";
+        if (contents.style.color==='rgb(96, 134, 180)') {
             hide.style.display='block'
+            contents.style.color='rgb(54, 54, 54)'
+            console.log('zhankai');
         } else {
-            button.innerHTML = "▶";
             hide.style.display='none'
+            contents.style.color='rgb(96, 134, 180)'
         }
         });
-    });
+    // });
 
 
 
