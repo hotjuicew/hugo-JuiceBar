@@ -6,29 +6,31 @@
   line-height: 1.6;
   overflow: hidden;
   white-space: nowrap;
+  @media (max-width: 768px){
+    margin-left: 0;
+  }
+  nav{
+    margin-left: -1rem;
+  }
+  ul,li {
+    list-style: none;
+  }
+  nav {
+    font-weight: bold;
+  }
+  nav > ul > li > a::before {
+    content: "┃";
+    color: $main-orange;
+  }
+  ul > li > ul > li :first-child::before {
+    content: "┃";
+    color: #fded01;
+  }
+  a :last-child {
+    margin-left: 5px;
+  }
 }
 
-.post-toc ul, .post-toc li {
-  list-style: none;
-}
-
-.post-toc nav {
-  font-weight: bold;
-}
-
-.post-toc nav > ul > li > a::before {
-  content: "┃";
-  color: $main-orange;
-}
-
-.post-toc ul > li > ul > li :first-child::before {
-  content: "┃";
-  color: #fded01;
-}
-
-.post-toc a :last-child {
-  margin-left: 5px;
-}
 #TableOfContents a:hover, #TableOfContents a:active {
   color: $main-orange;
 }
@@ -39,7 +41,15 @@
   top: 100px;
   width: 15vw;
   bottom: 50px;
-  @media (max-width: 768px){
+  button{
     display: none;
   }
+  @media (max-width: 768px){
+    position: static;
+    width: auto;
+    button{
+      display: inline;
+    }
+  }
+  margin-bottom: 1rem;
 }

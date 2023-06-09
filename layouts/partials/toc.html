@@ -4,10 +4,31 @@
     <div class="post-toc">
         {{ if and (gt .WordCount 80) (.Params.toc | default true) }}
             <aside>
-                <h4 style="margin-left: 1vw;">CONTENTS</h4>
-                {{- $toc := replaceRE `<ul>\n<li>\n<ul>` `<ul>` $toc -}}
-                {{- safeHTML $toc -}}
+                <h4 style="margin-left: 1vw;">CONTENTS  <button id="tocButton">▶</button></h4>
+                <div id="hide">
+                    {{- $toc := replaceRE `<ul>\n<li>\n<ul>` `<ul>` $toc -}}
+                        {{- safeHTML $toc -}}
+                </div>
             </aside>
         {{ end }}
     </div>
 {{- end -}}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let button = document.getElementById('tocButton');
+        let hide = document.getElementById("hide");
+        button.addEventListener("click", function() {
+        if (button.innerHTML === "▶") {
+            button.innerHTML = "▼";
+            hide.style.display='block'
+        } else {
+            button.innerHTML = "▶";
+            hide.style.display='none'
+        }
+        });
+    });
+
+
+
+
+</script>
