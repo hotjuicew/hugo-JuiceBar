@@ -135,8 +135,8 @@ $ cp themes/hugo-JuiceBar/exampleSite/config.toml。
 
 最后，只需运行 `$ hugo new content/about.md` 创建你的 '关于' 页面，以及 `$ hugo new content/post/title.md` 创建你的第一篇博客文章。
 
-## 如何使用文章加密
-（注意，非常不安全，酌情使用）
+## 如何使用文章保护
+（注意，仅限于阻止未经授权的访问，但无法防止技术高手或有意攻击的人获取密码或破解密码，酌情使用）
 只需在帖子的元信息中添加
 ```
 protected: true

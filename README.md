@@ -135,8 +135,8 @@ I recommend you use the theme's archetypes so now delete your site's `archetypes
 
 Finally, just run `$ hugo new content/about.md` to create your 'About' page, and `$ hugo new content/post/title.md` to create your first blog post.
 
-## How to Use Article Encryption
-(Note: Highly insecure, use with caution)
+## How to Use Article Protection
+(Please note that password protection is intended to prevent unauthorized access only and may not be effective against skilled individuals or deliberate attacks. Use it accordingly.)
 Simply add to the meta information of the post
 ```
 protected: true
