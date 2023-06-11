@@ -4,7 +4,7 @@
     <!-- Show password entry box -->
     <div id="secret-word">Unlock it!</div>
     <form id="password-form" onsubmit="checkPassword(); return false;">
-        <input type="password" name="password" id="password" placeholder="Please enter your password" required>
+        <input type="password" name="password" id="password" placeholder="Please enter password" required>
         <input type="hidden" name="encryptedPassword" id="encrypted-password">
         <input type="submit" value="Submit" name="submit" id="submit">
     </form>
@@ -45,6 +45,18 @@
             {{ .Content }}
         </div>
     </div>
+    <a href="#" id="scrollToTopButton">
+        <svg t="1686496851324" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="6566" width="38" height="38">
+            <path
+                d="M682.24 558.144l0.064-0.128-0.576-0.448c-0.576-0.768-0.896-1.472-1.472-2.176-0.704-0.576-1.408-1.024-2.112-1.536L531.84 407.552C521.088 396.8 503.616 396.8 492.8 407.552l-146.496 146.56c-0.896 0.64-1.728 1.152-2.432 1.792-0.768 0.768-1.28 1.6-1.792 2.432L340.992 559.424 341.12 559.616C332.8 572.224 337.408 593.088 353.024 608.576 368.448 624.128 389.248 628.672 401.92 620.352L402.368 620.8l3.008-2.944C405.504 617.728 405.568 617.728 405.632 617.6c0 0 0.064-0.064 0.128-0.064L492.8 530.432c10.816-10.816 28.224-10.816 38.976 0l86.336 86.272c0.064 0.064 0.192 0.32 0.32 0.448C618.624 617.344 618.88 617.408 619.008 617.536l1.856 1.792 0.32-0.192c12.544 9.216 33.984 4.672 49.856-11.2C686.976 592.192 691.456 570.752 682.24 558.144z"
+                fill="#FAB005" p-id="6567"></path>
+            <path
+                d="M512 64C264.576 64 64 264.576 64 512c0 247.36 200.576 448 448 448s448-200.64 448-448C960 264.576 759.424 64 512 64zM512 864.512c-194.624 0-352.512-157.824-352.512-352.512 0-194.624 157.888-352.512 352.512-352.512 194.688 0 352.512 157.888 352.512 352.512C864.512 706.688 706.688 864.512 512 864.512z"
+                fill="#FAB005" p-id="6568"></path>
+        </svg>
+    </a>
+
     {{- /* Comment */ -}}
     {{- partial "comment.html" . -}}
     <div class="pp-container">
@@ -63,13 +75,37 @@
             </div>
         </section>
     </div>
+
 </div>
 <script></script>
 <script>
+    // Quickly reach the top of the article
+    document.getElementById('scrollToTopButton').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    console.log('window.matchMedia("(max-width: 768px)").matches',window.matchMedia("(max-width: 768px)").matches)
+    //Set the element to be displayed on mobile only when the mouse is scrolled up, not when it is scrolled down
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        var prevScrollPos = window.pageYOffset;
+
+        window.addEventListener('scroll', function () {
+            var currentScrollPos = window.pageYOffset;
+
+            if (currentScrollPos < prevScrollPos) {
+                document.querySelector('#scrollToTopButton').style.display = 'block';
+            } else {
+                document.querySelector('#scrollToTopButton').style.display = 'none';
+            }
+
+            prevScrollPos = currentScrollPos;
+        });
+    }
+
+
     // Set the mobile SUBMIT width to the width of the input box
     const passwordInput = document.querySelector("#password");
     const submitButton = document.querySelector("#submit");
-    passwordInput.style.width = (passwordInput.scrollWidth + 2) + "px";
+    passwordInput.style.width = (passwordInput.scrollWidth) + "px";
     submitButton.style.width = window.getComputedStyle(passwordInput).width;
 
     window.addEventListener('DOMContentLoaded', () => {
