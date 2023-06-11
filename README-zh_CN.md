@@ -21,6 +21,7 @@ JuiceBar 是一个简洁、优雅的博客主题，由 [Hugo](https://gohugo.io)
 - 自动突出显示代码
 - 自定义脚本短代码
 - 支持 [giscus](https://giscus.app/) 评论系统
+- 简单的文章加密功能（注意，非常不安全，酌情使用）
 
 ## 如何开始
 
@@ -133,3 +134,12 @@ $ cp themes/hugo-JuiceBar/exampleSite/config.toml。
 我建议您使用主题的原型，因此现在删除您站点的`archetypes/default.md`。
 
 最后，只需运行 `$ hugo new content/about.md` 创建你的 '关于' 页面，以及 `$ hugo new content/post/title.md` 创建你的第一篇博客文章。
+
+## 如何使用文章加密
+（注意，非常不安全，酌情使用）
+只需在帖子的元信息中添加
+```
+protected: true
+password: "xxxxxx"
+```
+

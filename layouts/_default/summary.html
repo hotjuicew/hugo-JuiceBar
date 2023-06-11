@@ -2,20 +2,25 @@
   <div class="single-container column is-centered">
     <div class="archive" id="post-container">
       <header class="post-header">
-        <h1 class="post-title hover-underline-animation"><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-       
-       
+        <h1 class="post-title hover-underline-animation"><a class="post-link" href="{{ .RelPermalink }}">{{ .Title
+            }}</a></h1>
+
+
       </header>
       <div class="post-content">
         <div class="excerpt post-summary">
+          {{ if .Params.protected}}
+          <p>Psst! The article you seek is guarded by a mischievous password, hidden within the realms of whimsy and giggles. Unleash your inner unicorn, sprinkle some sparkle, and let the charm of curiosity guide you to unlock its enchanting secrets!</p>
+          {{ else }}
           {{ .Summary }}
+          {{ end }}
         </div>
-        
+
         <div class="post-time-container">
           <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
         </div>
       </div>
-      
+
     </div>
   </div>
 </article>

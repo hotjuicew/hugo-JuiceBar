@@ -1,3 +1,35 @@
+#verification{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+  #secret-word{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    input[type="password"] {
+      margin-bottom: 1.5rem;
+      padding: 10px 20px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: $main-orange;
+    }
+    
+  }
+}
+
+
+.hidden{
+  display: none;
+}
 .single-container{
 
   .archive{
@@ -24,6 +56,7 @@
         color: #6086b4;
       }
     }
+    
 
   }
 
@@ -43,7 +76,29 @@
 }
 
 @media (max-width: 768px) {
-
+  #verification{
+    
+    #secret-word{
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    form {
+      
+      input[type="password"] {
+        padding: 10px 20px;
+        width: auto;
+        margin-bottom: 1rem;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: $main-orange;
+      }
+      
+      
+    }
+  }
+  
   .single-container .title {
     text-align: left;
     .small-categories-container {

@@ -2,6 +2,8 @@
 title: "Lorem Ipsum"
 date: 2022-04-10T16:50:28+08:00
 categories : [ "Development" ]
+protected: true
+password: "111111"
 ---
 Lorem ipsum dolor sit amet, consectetur...
 ## What is Lorem Ipsum?

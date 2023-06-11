@@ -23,8 +23,8 @@ This theme drew a lot of inspiration from PapermMod and LoveIt, and credit is du
 - Easy-to-use and self-expanding table of contents
 - Automatically highlighting code
 - Custom script shortcode
-- giscus comment system supported by giscus
-
+- [giscus](https://giscus.app/) comment system supported by giscus
+- Simple Article Encryption Feature (Note: Highly insecure, use with caution)
 ## How to start
 
 
@@ -134,3 +134,12 @@ Now edit this file and add your own information. Note that some fields can be om
 I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
 
 Finally, just run `$ hugo new content/about.md` to create your 'About' page, and `$ hugo new content/post/title.md` to create your first blog post.
+
+## How to Use Article Encryption
+(Note: Highly insecure, use with caution)
+Simply add to the meta information of the post
+```
+protected: true
+password: "xxxxxx"
+```
+ 
