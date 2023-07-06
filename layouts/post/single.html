@@ -1,17 +1,5 @@
 {{ define "main" }}
-{{ if .Params.protected }}
-<div id="verification">
-    <!-- Show password entry box -->
-    <div id="secret-word">Unlock it!</div>
-    <form id="password-form" onsubmit="checkPassword(); return false;">
-        <input type="password" name="password" id="password" placeholder="Please enter password" required>
-        <input type="hidden" name="encryptedPassword" id="encrypted-password">
-        <input type="submit" value="Submit" name="submit" id="submit">
-    </form>
-</div>
-{{ end }}
-<!-- Display unencrypted diary contents -->
-<div class="single-container {{ if .Params.protected }}hidden{{ end }}">
+<div class="single-container">
     <div class="archive">
         <h1 class="title is-1">{{ .Title }}</h1>
         <div class="title subtitle heading is-6">
@@ -23,7 +11,7 @@
                             <img src="{{ . }}" class="author-image">
                         </div>
                         {{ end }}
-                        <div class="column">
+                        <div class="column" >
                             <p>{{ .Site.Params.Author }}</p>
                             <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time>
                             </p>
@@ -32,8 +20,8 @@
                 </div>
                 <div class="small-categories-container">
                     {{ range $idx, $category := .Params.categories }}
-                    {{- if ne $idx 0 }}, {{ end }}<a href='{{ "categories/" | relURL }}{{ $category | urlize }}'>{{
-                        $category }}</a>
+                    {{- if ne $idx 0 }}, {{ end }}<a
+                        href="{{ "categories/" | relURL }}{{ $category | urlize }}">{{ $category }}</a>
                     {{- end }}
                 </div>
             </div>
@@ -41,7 +29,7 @@
         <div class="content article-content">
             <div class="toc-container">
                 {{ partial "toc.html" . }}
-            </div>
+                </div>
             {{ .Content }}
         </div>
     </div>
@@ -61,84 +49,20 @@
     {{- partial "comment.html" . -}}
     <div class="pp-container">
         <section class="pre-and-post">
-            <div class="has-text-left">
-                {{ with .PrevInSection }}
-                <p>Previous post</p>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end }}
-            </div>
-            <div class="has-text-right">
-                {{ with .NextInSection }}
-                <p>Next post</p>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end }}
-            </div>
+                        <div class="has-text-left">
+                            {{ with .PrevInSection }}
+                            <p>Previous post</p>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            {{ end }}
+                        </div>
+                        <div class="has-text-right">
+                            {{ with .NextInSection }}
+                            <p>Next post</p>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            {{ end }}
+                        </div>
         </section>
     </div>
 
 </div>
-<script></script>
-<script>
-    // Quickly reach the top of the article
-    document.getElementById('scrollToTopButton').addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    console.log('window.matchMedia("(max-width: 768px)").matches', window.matchMedia("(max-width: 768px)").matches)
-    //Set the element to be displayed on mobile only when the mouse is scrolled up, not when it is scrolled down
-    // if (window.matchMedia("(max-width: 768px)").matches) {
-    //     var prevScrollPos = window.pageYOffset;
-
-    //     window.addEventListener('scroll', function () {
-    //         var currentScrollPos = window.pageYOffset;
-
-    //         if (currentScrollPos < prevScrollPos) {
-    //             document.querySelector('#scrollToTopButton').style.display = 'block';
-    //         } else {
-    //             document.querySelector('#scrollToTopButton').style.display = 'none';
-    //         }
-
-    //         prevScrollPos = currentScrollPos;
-    //     });
-    // }
-
-
-    // Set the mobile SUBMIT width to the width of the input box
-    const passwordInput = document.querySelector("#password");
-    const submitButton = document.querySelector("#submit");
-    passwordInput.style.width = (passwordInput.scrollWidth) + "px";
-    submitButton.style.width = window.getComputedStyle(passwordInput).width;
-
-    window.addEventListener('DOMContentLoaded', () => {
-        const submitButton = document.getElementById('submit');
-        submitButton.addEventListener('click', function (event) {
-            event.preventDefault(); // Blocking the default form submission behavior
-            checkPassword();
-        });
-
-        function checkPassword() {
-            const passwordInput = document.querySelector('input[name="password"]');
-            const password = passwordInput.value;
-            const correctPassword = "{{ .Params.password }}"; // Get the correct password from the article's meta information
-
-            if (password === correctPassword) {
-                // Password verification successful, display the original content
-                document.getElementById("verification").style.display = "none";
-                document.querySelector(".single-container").classList.remove('hidden');
-                //Hide password parameters
-                hidePasswordFromURL()
-            } else {
-                // Password verification failed, error message displayed
-                alert("Incorrect password. Please try again.");
-            }
-        }
-        function hidePasswordFromURL() {
-            const urlParams = new URLSearchParams(window.location.search);
-            urlParams.set('password', '******');
-            const newURL = window.location.pathname + '?' + urlParams.toString();
-            window.history.replaceState({}, '', newURL);
-        }
-    });
-</script>
-
-
 {{ end }}
