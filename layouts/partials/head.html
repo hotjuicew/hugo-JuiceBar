@@ -13,7 +13,6 @@
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     {{ if not (in (string .Site.BaseURL) "localhost") }}
-    {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
 
 </head>
